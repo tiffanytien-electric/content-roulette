@@ -294,114 +294,20 @@
     <script>
         // Data arrays
         const firstNames = [
-            // East Asian First Names (Alphabetical)
-            'Aki', 'Dae-hyun', 'Doyun', 'Eun-ji', 'Feng', 'Hana', 'Hanzo', 'Haruto', 'Hiroshi', 
-            'Jiao', 'Jin', 'Jing', 'Jun', 'Kai', 'Kei', 'Kenji', 'Linh', 'Lixin', 'Megumi', 
-            'Mei-Ling', 'Minh', 'Misako', 'Niran', 'Qiang', 'Rei', 'Ren', 'Rong', 'Ryo', 
-            'Sakura', 'Shinji', 'Sohyeon', 'Sung-min', 'Takumi', 'Wei-Ming', 'Xiao-Yu', 'Yin', 
-            'Yuki', 'Zhi-Wei',
-        
-            // South Asian First Names (Alphabetical)
-            'Aarav', 'Akash', 'Amit', 'Anand', 'Asha', 'Anish', 'Anjali', 'Ari', 'Arjun', 
-            'Arya', 'Avni', 'Divya', 'Diya', 'Ira', 'Jaya', 'Kavya', 'Kiran', 'Manish', 
-            'Meera', 'Neel', 'Naveen', 'Nikhil', 'Niraj', 'Nisha', 'Nylah', 'Piyush', 'Pooja', 
-            'Pradeep', 'Preet', 'Raghav', 'Raj', 'Rashika', 'Ravi', 'Riya', 'Rohit', 'Sanjay', 
-            'Shaan', 'Shreya', 'Sonal', 'Suresh', 'Swati', 'Varun', 'Vikram',
-        
-            // Middle Eastern/North African First Names (Alphabetical)
-            'Ahmed', 'Amani', 'Amira', 'Bassam', 'Dina', 'Eden', 'Fatima', 'Farah', 'Fouad', 'Hala', 
-            'Hassan', 'Iman', 'Jamal', 'Karim', 'Laith', 'Lamar', 'Lana', 'Layla', 'Leila', 
-            'Marwan', 'Mazen', 'Mona', 'Musa', 'Nadia', 'Nasser', 'Noor', 'Nour', 'Omar', 'Rami', 
-            'Rana', 'Rania', 'Reza', 'Salam', 'Salem', 'Salim', 'Samar', 'Soraya', 'Tariq', 
-            'Walid', 'Yasmin', 'Yusuf', 'Zahra', 'Ziad', 'Zuri',
-        
-            // Latino/Hispanic First Names (Alphabetical)
-            'Adria¡n', 'Alejandro', 'Andrea', 'Andres', 'Camila', 'Carlos', 'Carmen', 'Cecilia',
-            'Cesar', 'Daniela', 'Diego', 'Elena', 'ElÃ³ise', 'Emilio', 'Esperanza', 'Fabian', 'Fernando',
-            'Gabriel', 'Gabriella', 'Isabella', 'IsaÃº', 'Joaquin', 'Katalina', 'Lidia', 'Lucia', 
-            'Luis', 'Marisa', 'Mateo', 'Miguel', 'Natalia', 'Pablo', 'Rafael', 'Santiago', 
-            'Sofia', 'TomÃ¡s',
-        
-            // European First Names (Alphabetical)
-            'Alessandro', 'Anja', 'AmÃ©lie', 'Anton', 'Armando', 'Astrid', 'Beatrice', 'Brigitte', 'Camille',
-            'Claudia', 'Dimitri', 'Dominik', 'Dorothea', 'Emma', 'Erik', 'Enzo', 'Francesca', 'Giovanni', 'Hans',
-            'Heidi', 'Hans', 'Henrik', 'Hugo', 'Ines', 
-            'Ingrid', 'Ivan', 'Janek', 'JuliÃ¡n', 'Janek', 'Katarina', 'Katya', 'Klaus', 'Larssen', 'Martina', 'Marco', 'Mathias', 
-            'Natasha', 'Olga', 'Olivia', 'Pietro', 'Pierre', 'Sabine', 'Sergei', 'Simone', 'Sophie', 'Soren', 'Tiago',
-            'Tobias', 'Valentina', 'Viktor',
-        
-            // Other First Names (Alphabetical)
-            'Abigail', 'Abraham', 'Amara', 'Amari', 'Aria', 'Atlas', 'Aurora', 'Avery', 'Calvin', 
-            'Celeste', 'Charlotte', 'Cora', 'Dante', 'Darby', 'Darius', 'Denise', 'Desmond', 
-            'Dorian', 'Ember', 'Emery', 'Erezabet', 'Ezra', 'Felix', 'Geralt', 'Harper', 'Hayden', 
-            'Imani', 'Indigo', 'Iris', 'Isaiah', 'Ivy', 'Jamal', 'Jamison', 'Jasmine', 'Jasper', 
-            'Jerome', 'Jillian', 'Juniper', 'Kaia', 'Keisha', 'Kofi', 'Leo', 'Luna', 'Lyra', 
-            'Malcolm', 'Mason', 'Nia', 'Nova', 'Orion', 'Parker', 
-            'Philip', 'Philippa', 'Phoenix', 'Riley', 'Sage', 'Sebastian', 'Serena', 'Stella', 
-            'Tarkus', 'Tasha', 'Terrell', 'Vera', 'Wren', 'Zara', 'Zephyr', 'Zion',
-        
-            // Pet First Names (Alphabetical)
-            'Casey', 'Chloe', 'Conner', 'Daisy', 'J.B.', 'Mac', 'Mochi', 'Murray', 'Yeppy'
+            'Aki', 'Wei-Ming', 'Dae-hyun', 'Minh', 'Kamon', 'Zhi-Wei', 'Kenji', 'Haruto', 'Feng', 'Sung-min', 'Ryo',
+            'Mei-Ling', 'Yuki', 'Soha', 'Linh', 'Xiao-Yu', 'Sakura', 'Eun-ji', 'Rei', 'Jing', 'Misako',
+            'Arjun', 'Vikram', 'Raj', 'Anish', 'Rohit', 'Kiran', 'Amit', 'Sanjay', 'Raghav', 'Kavya', 'Ananya', 'Shreya',
+            'Hassan', 'Karim', 'Yusuf', 'Tariq', 'Ahmed', 'Omar', 'Layla', 'Nour', 'Amira', 'Yasmin',
+            'Alejandro', 'Carlos', 'Rafael', 'Miguel', 'Diego', 'Gabriel', 'Valentina', 'Carmen', 'Sofia', 'Isabella',
+            'Alessandro', 'Henrik', 'Dimitri', 'Jean-Luc', 'Klaus', 'Ingrid', 'Francesca', 'Katarina', 'Sophie', 'Emma',
+            'James', 'Sarah', 'Michael', 'Jessica', 'David', 'Ashley', 'Chris', 'Amanda', 'Alex', 'Jennifer'
         ];
 
         const lastNames = [
-            // East Asian Last Names (Alphabetical)
-            'Bui', 'Cha', 'Chen', 'Choi', 'Dao', 'Fan', 'Fujiwara', 'Hasashi', 'Han', 'Huang', 'Jang','Jeong', 
-            'Kang', 'Kim', 'Kitada', 'Kobayashi', 'Koh', 'Kwok', 'Lam', 'Li', 'Liang', 
-            'Lim', 'Liu', 'Nakamura', 'Nguyen', 'Park', 'Pham', 'Qing', 'Sato', 'Soh', 
-            'Song', 'Shin', 'Takagi', 'Takahashi', 'Tanaka', 'Tao', 'Thanh', 'Tian', 'Tran', 'Tsai', 
-            'Tsao', 'Wei', 'Wu', 'Yamada', 'Yamamoto', 'Zhang', 'Zhou', 'Zhu',
-        
-            // South Asian Last Names (Alphabetical)
-            'Agarwal', 'Ahsan', 'Banerjee', 'Banu', 'Bhagat', 
-            'Chandra', 'Chatterjee', 'Chopra', 'Das', 'Desai', 'Dutta', 'Ghosh', 'Gupta', 
-            'Iyer', 'Joshi', 'Kapoor', 'Khanna', 'Krishnan', 'Kulkarni', 'Kumar', 'Majumdar', 
-            'Malhotra', 'Mehta', 'Menon', 'Mishra', 'Mukherjee', 'Nair', 'Pandey', 'Patel', 
-            'Prasad', 'Raghavan', 'Rao', 'Reddy', 'Shah', 'Sharma', 
-            'Singh', 'Srinivasan', 'Sood', 'Thakur', 'Tiwari', 'Verma', 'Yadav',
-        
-            // Middle Eastern/North African Last Names (Alphabetical)
-            'Abadi', 'Abdelaziz', 'Adnan', 'Aziz', 
-            'Azouri', 'Barakat', 'Bashara', 'Basir', 'Dawood', 'El-Sayed', 'Farouk', 'Gamal', 
-            'Habib', 'Hakim', 'Hashim', 'Issa', 'Jafari', 'Joudi', 
-            'Kanaan', 'Karimi', 'Kassab', 'Khalil', 'Khoury', 'Maalouf', 'Mansour', 'Mousa', 
-            'Mustafa', 'Najjar', 'Nasr', 'Nazir', 'Obeid', 'Qureshi', 'Rashid', 'Saleh', 
-            'Samir', 'Salim', 'Saleh', 'Shihab', 'Sharif', 'Taleb', 'Tabbara', 'Youssef', 'Zahran', 'Zaki',
-        
-            // Latino/Hispanic Last Names (Alphabetical)
-            'Aguilar', 'Benitez', 'Caballero', 'Calderon', 'Campos', 'Castillo', 'Cervantes', 
-            'Chavez', 'Contreras', 'Cordova', 'Coronado', 'Costa', 'Delgado', 'Dominguez', 
-            'Espinoza', 'Estrada', 'Fernandez', 'Figueroa', 'Fuentes', 'Garcia', 'Guerrero', 
-            'Gutierrez', 'Heredia', 'Hernandez', 'Herrera', 'Jimenez', 'Maldonado', 'Medina', 
-            'Mendoza', 'Montoya', 'Morales', 'Moreno', 'Navarro', 'Ortega', 'Pacheco', 'Pereira', 
-            'Perez', 'Ramos', 'Restrepo', 'Rivera', 'Rojas', 'Ruiz', 'Sandoval', 'Santos', 
-            'Solis', 'Torres', 'Vargas', 'Vasquez', 'Vega', 'Velasco', 'Vicente', 'Villareal',
-        
-            // European Last Names (Alphabetical)
-            'Almeida', '\u00C5kesson', 'Becker', 'Bauer', 'Bernard', 'Bianchi', 'Blanc', 'Bogdanovic', 'Brenner', 'Cruz', 'Conti', 'Cvetkovic', 'Durand', 'Dubois',
-            'Dunne', 'Dahl', 'Delgado', 'Ekstr\u00F6m',
-            'Eriksson', 'Fontaine', 'Fischer', 'Garrido', 'Gauthier', 'Hoffman', 'Ivanovic', 'Jennings', 'Jenson', 
-            'Johansson', 'Kowalski', 'Krawczyk', 'Larsson', 'Leroy', 'Lundberg', 'Makris', 'Meier',
-            'McPierce', 'Miller', 'Millington', 'Moreau', 'Nelson', 'Nielsen', 'Novak', 
-            'Nowak', 'O\'Connor', 'Makarov', 'Pearson', 'Petrov', 'Ricci', 'Rossi', 'Ribeiro', 'Roux', 'Rousseau', 
-            'Salvadori', 'Schneider', 'Sokolova', 'Volkov', 'Wagner', 'Weber', 'Zappa', 'Zervos',
-        
-            // Other Last Names (Alphabetical)
-            'Adams', 'Asante', 'Ashworth', 'Bailey', 'Baker', 'Brooks', 'Butler', 'Cai', 
-            'Campbell', 'Carter', 'Chambers', 'Christensen', 'Clark', 'Collins', 'Cooper', 
-            'Cross', 'Davis', 'Edwards', 'Elliott', 'Finch', 'Fletcher', 'Ford', 'Goodwin', 
-            'Gray', 'Green', 'Grey', 'Hall', 'Hamilton', 'Hammond', 'Hanson', 'Harris', 
-            'Hoover', 'Howard', 'Hutchinson', 'Jackson', 'Johnson', 'Knight', 'Lewis', 'Lucas', 
-            'Martin', 'McKnight', 'Mensah', 'Mercado', 'Mitchell', 'Monroe', 'Montgomery', 
-            'Moore', 'Morrison', 'Okonkwo', 'Ravencroft', 'Reed', 
-            'Richardson', 'Robinson', 'Russell', 'Sanford', 'Saunders', 'Scott', 'Silverton', 
-            'Smith', 'Sterling', 'Stewart', 'Stone', 'Tatum', 'Taylor', 'Ternes', 
-            'Thompson', 'Thornfield', 'Turner', 'Walters', 
-            'Warner', 'Washington', 'Webber', 'Whitmore', 'Wilkinson', 'Wilson', 
-            'Wolfslayer',
-        
-            // Pet Last Names (Alphabetical)
-            'Cai', 'Hoover', 'Smith', 'Ternes', 'Ternes-Hoover', 'Toon Lehmann', 'Woo'
+            'Yamamoto', 'Chen', 'Park', 'Nguyen', 'Tanaka', 'Kim', 'Liu', 'Zhang', 'Lee', 'Singh', 'Sharma', 'Patel',
+            'Al-Mahmoud', 'Farouk', 'Khalil', 'Morales', 'Herrera', 'Santos', 'Garcia', 'Rodriguez',
+            'Rossi', 'Larsson', 'Dubois', 'Mueller', 'Johnson', 'Smith', 'Williams', 'Brown', 'Jones', 'Miller',
+            'Thompson', 'Wilson', 'Davis', 'Taylor', 'Anderson', 'Martinez', 'Jackson', 'White', 'Harris', 'Martin'
         ];
 
         const streets = [
@@ -437,75 +343,25 @@
         ];
 
         const windowsDevices = [
-            'Dell UltraSharp 27" Monitor U2723QE', 'Apple Studio 5K Retina Display 27"', 'LG 27" 4K UHD UltraFine IPS Monitor',
-            'HP Series 7 Pro 27 inch 4K Thunderbolt 4 Monitor', 'ASUS VZ279 Gaming Monitor',
-            'Apple Magic Keyboard USB-C', 'Razer Pro Type Ultra - Wireless Keyboard', 'Logitech MX Keyboard',
-            'Lunar Artefacts Mouse', 'Apple Magic Mouse 2 (USB-C)', 'SteelSeries Aerox 9 Gaming Mouse', 'Logitech Wireless Mouse MX3',
-            'Anker 8-in-1 USB Hub', 'Cisco Router SG220-26', 
-            'Samsung T7 8TB SSD', 'Western Digital G-Drive Ultra 16TB', 'SeaGate IronWolf 24TB',
-            'CalDigit TS4 Docking Station', 'ASUS Thunderbolt Dock USB-C',
-            'Bose QC45 Bluetooth Speaker', 'Netgear Nighthawk AX12 Router'
+            'Dell XPS 13', 'HP Spectre x360', 'Lenovo ThinkPad X1 Carbon', 'ASUS ZenBook 14', 'Surface Laptop 5',
+            'HP Pavilion 15', 'Lenovo ThinkPad T14', 'ASUS VivoBook Pro 15', 'Surface Laptop Studio 2',
+            'Dell Inspiron 16 Plus', 'HP Envy 15', 'Lenovo Legion 5 Pro', 'ASUS ROG Zephyrus G14'
         ];
 
         const jobTitles = [
-            // Finance
-            'Senior Financial Analyst', 'Tax Specialist Level II',
-            'Investment Banking Associate', 'Director of Risk Management', 'VP of Corporate Finance',
-            
-            // Engineering
-            'Software Engineer', 'Senior Backend Developer', 'DevOps Engineer Level III', 'Principal Software Architect',
-            'Data Engineer', 'Senior Full Stack Developer', 'Machine Learning Engineer II', 'Engineering Manager',
-            
-            // Design
-            'Senior Product Designer', 'Creative Director', 'UI/UX Designer Level II',
-            'Brand Designer', 'Senior Visual Designer', 'Design System Lead',
-            
-            // Marketing
-            'Marketing Coordinator', 'Senior Digital Marketing Manager', 'Content Marketing Specialist II',
-            'Brand Marketing Director', 'Senior Growth Marketing Manager', 'Performance Marketing Lead', 'VP of Marketing',
-            
-            // Sales
-            'Sales Representative', 'Senior Account Executive', 'Sales Director', 'Business Development Manager II',
-            'Enterprise Sales Manager', 'Senior Customer Success Manager', 'Regional Sales Director',
-            
-            // HR
-            'HR Coordinator', 'Senior People Operations Manager', 'CHRO', 'Talent Acquisition Specialist II',
-            'Employee Relations Manager', 'Senior Compensation Analyst', 'Organizational Development Director', 'VP of People & Culture',
-            
-            // IT
-            'IT Specialist', 'Senior Systems Administrator', 'Network Engineer Level III',
-            'Cybersecurity Manager', 'Senior Cloud Architect', 'IT Operations Director', 'Chief Information Security Officer',
-            
-            // Product
-            'Product Manager', 'Senior Product Manager', 'Associate Product Manager II',
-            'Technical Product Manager', 'Senior Product Marketing Manager', 'Director of Product Strategy', 'VP of Product',
-            
-            // Operations
-            'Operations Coordinator', 'Senior Operations Manager', 'Supply Chain Analyst Level II',
-            'Process Improvement Manager', 'Senior Project Manager', 'Operations Excellence Director', 'VP of Operations',
-            
-            // Data & Analytics
-            'Data Analyst', 'Senior Data Scientist', 'Business Intelligence Analyst II',
-            'Analytics Manager', 'Directer of Data Engineering', 'VP of Data & Analytics',
-            
-            // Customer Success
-            'Customer Success Representative', 'Senior Customer Success Manager', 'Customer Success Specialist II',
-            'Customer Experience Manager', 'Senior Account Manager', 'Directer of Customer Success',
-            
-            // Legal & Compliance
-            'Legal Assistant', 'Senior Corporate Counsel', 'General Counsel', 'Compliance Officer Level II',
-            'Senior Legal Operations Manager', 'Chief Compliance Officer',
-            
-            // Silly Job Titles
+            // Tech
+            'Senior Software Engineer', 'DevOps Engineer', 'Data Scientist', 'UX Designer', 'Product Manager',
+            'Full Stack Developer', 'Machine Learning Engineer', 'Cloud Architect', 'Cybersecurity Specialist',
+            // Professional
+            'Project Manager', 'Business Analyst', 'Marketing Director', 'Sales Representative', 'HR Coordinator',
+            'Financial Analyst', 'Operations Manager', 'Customer Success Manager',
+            // Funny
             'Chief Happiness Officer', 'Senior Meme Analyst', 'Director of Cat Herding', 'Nap Coordinator',
-            'VP of Snack Operations', 'Coffee Quality Assurance Manager', 'Senior Emoji Specialist', 'Chief Procrastination Officer',
-            'Lead Rubber Duck Debugger', 'Director of Office Plants', 'Senior Overthinking Consultant', 'Principal Chaos Engineer',
-            'VP of Meeting About Meetings', 'Chief Fun Police', 'Director of Existential Crisis Management',
-            'Chief Wizard', 'Senior Deadline Whisperer', 'Sock Puppet Strategist', 'Top Hat Magician', '',
-            'VP of Overthinking', 'Lead Conspiracy Theory Debunker', 'Professional Meeting Attender', 'Fashion Police Officer',
-            'Pro Wrestler', 'Chief Nap Advisor', 'Lead Cereal Taster', 'Puppy Concierge', 'Senior Pen Cap Chewer', 
-            'Director of Explaining Things Twice', 'Principal Cat Video Quality Controller', 'VP of Making Things Look Busy', 'Senior Parking Spot Negotiator',
-            'Chief Microwave Timer Expert','VP of Untangling Headphones', 'Senior YOLO Operative'
+            'VP of Snack Operations', 'Coffee Quality Assurance Manager', 'Senior Emoji Specialist',
+            'Chief Procrastination Officer', 'Lead Rubber Duck Debugger', 'Director of Office Plants',
+            'Senior Overthinking Consultant', 'Principal Chaos Engineer', 'VP of Meeting About Meetings',
+            'Chief Fun Police', 'Director of Existential Crisis Management', 'Senior Deadline Whisperer',
+            'Professional Meeting Attender', 'Chief Microwave Timer Expert', 'VP of Untangling Headphones'
         ];
 
         const personalEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com', 'aol.com'];
@@ -646,7 +502,27 @@
                     return `${first}.${last}@${domain}`;
                 },
                 jobs: () => randomChoice(jobTitles),
-                serials: () => randomAlphanumeric(2) + randomDigits(8) + randomAlphanumeric(2)
+                serials: () => randomAlphanumeric(2) + randomDigits(8) + randomAlphanumeric(2),
+                organizations: () => {
+                    const name = randomChoice(organizationNames);
+                    const type = randomChoice(organizationTypes);
+                    const formats = [
+                        `${name} ${type}`,
+                        `${name} ${randomChoice(organizationNames)} ${type}`,
+                        `${randomChoice(organizationNames)} ${name} ${type}`
+                    ];
+                    return randomChoice(formats);
+                },
+                apps: () => {
+                    const formats = [
+                        () => `${randomChoice(appPrefixes)}${randomChoice(appTypes)}`,
+                        () => `${randomChoice(appTypes)}${randomChoice(appSuffixes)}`,
+                        () => `${randomChoice(appPrefixes)}${randomChoice(appTypes)}${randomChoice(appSuffixes)}`,
+                        () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
+                        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`
+                    ];
+                    return randomChoice(formats)();
+                }
             };
             
             const results = [];
