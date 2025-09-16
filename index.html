@@ -124,6 +124,11 @@
             font-weight: 500;
             width: 100%;
             margin-bottom: 15px;
+            transition: background-color 0.2s;
+        }
+
+        .generate-btn:hover {
+            background: #2d3748;
         }
 
         .output {
@@ -134,7 +139,7 @@
             font-family: 'Courier New', monospace;
             font-size: 1.1em;
             color: #495057;
-            height: 80px;
+            min-height: 80px;
             display: flex;
             align-items: center;
             word-break: break-all;
@@ -152,6 +157,7 @@
             color: #6c757d;
             margin-top: 5px;
             opacity: 0;
+            transition: opacity 0.3s;
         }
 
         .copy-notice.show {
@@ -339,25 +345,25 @@
             'Walid', 'Yasmin', 'Yusuf', 'Zahra', 'Ziad', 'Zuri',
         
             // Latino/Hispanic First Names (Alphabetical)
-            'Adri\u00E1n', 'Alejandro', 'Andrea', 'Andr\u00E9s', 'Camila', 'Carlos', 'Carmen', 'Cecilia',
-            'C\u00E9sar', 'Daniela', 'Diego', 'Elena', '\u00C9lo\u00EFse', 'Emilio', 'Esperanza', 'Fabian', 'Fernando',
-            'Gabriel', 'Gabriella', 'Isabella', 'Isa\u00FA', 'Joaqu\u00EDn', 'Katalina', 'Lidia', 'Luc\u00EDa', 
+            'Adrián', 'Alejandro', 'Andrea', 'Andrés', 'Camila', 'Carlos', 'Carmen', 'Cecilia',
+            'César', 'Daniela', 'Diego', 'Elena', 'Éloïse', 'Emilio', 'Esperanza', 'Fabian', 'Fernando',
+            'Gabriel', 'Gabriella', 'Isabella', 'Isaú', 'Joaquín', 'Katalina', 'Lidia', 'Lucía', 
             'Luis', 'Marisa', 'Mateo', 'Miguel', 'Natalia', 'Pablo', 'Rafael', 'Santiago', 
-            'Sof\u00EDa', 'Tomas',
+            'Sofía', 'Tomas',
         
             // European First Names (Alphabetical)
-            'Alessandro', 'Anja', 'Am\u00E9lie', 'Anton', 'Armando', 'Astrid', 'Beatrice', 'Brigitte', 'Camille',
+            'Alessandro', 'Anja', 'Amélie', 'Anton', 'Armando', 'Astrid', 'Beatrice', 'Brigitte', 'Camille',
             'Claudia', 'Dimitri', 'Dominik', 'Dorothea', 'Emma', 'Erik', 'Enzo', 'Francesca', 'Giovanni', 'Hans',
-            'Heidi', 'Hans', 'Henrik', 'Hugo', 'In\u00E9s', 
-            'Ingrid', 'Ivan', 'Janek', 'Juli\u00E1n', 'Janek', 'Katarina', 'Katya', 'Klaus', 'Larssen', 'Martina', 'Marco', 'Mathias', 
-            'Natasha', 'Olga', 'Olivia', 'Pietro', 'Pierre', 'Sabine', 'Sergei', 'Simone', 'Sophie', 'S\u00F8ren', 'Tiago',
+            'Heidi', 'Henrik', 'Hugo', 'Inés', 
+            'Ingrid', 'Ivan', 'Janek', 'Julián', 'Katarina', 'Katya', 'Klaus', 'Larssen', 'Martina', 'Marco', 'Mathias', 
+            'Natasha', 'Olga', 'Olivia', 'Pietro', 'Pierre', 'Sabine', 'Sergei', 'Simone', 'Sophie', 'Søren', 'Tiago',
             'Tobias', 'Valentina', 'Viktor',
         
             // Other First Names
             'Abigail', 'Abraham', 'Amara', 'Amari', 'Aria', 'Atlas', 'Aurora', 'Avery', 'Calvin', 
             'Celeste', 'Charlotte', 'Cora', 'Dante', 'Darby', 'Darius', 'Delphine', 'Denise', 'Desmond', 
-            'Dorian', 'Eleanor', 'Ember', 'Emery', 'Erezabet', 'Ezra', 'Felix', 'Fran\u00E7ois', 'Geralt', 'Gianna', 'Harper', 'Hayden',
-            'Hazel', 'Ignacio', 'Th\u00E9r\u00E8se',
+            'Dorian', 'Eleanor', 'Ember', 'Emery', 'Erezabet', 'Ezra', 'Felix', 'François', 'Geralt', 'Gianna', 'Harper', 'Hayden',
+            'Hazel', 'Ignacio', 'Thérèse',
             'Imani', 'Indigo', 'Iris', 'Isaiah', 'Ivy', 'Jamal', 'Jamison', 'Jasmine', 'Jasper', 
             'Jerome', 'Jillian', 'Juniper', 'Kaia', 'Keisha', 'Kofi', 'Leo', 'Luna', 'Lyra', 
             'Malcolm', 'Mason', 'Nia', 'Nova', 'Orion', 'Parker', 
@@ -390,32 +396,32 @@
             'Habib', 'Hakim', 'Hashim', 'Issa', 'Jafari', 'Joudi', 
             'Kanaan', 'Karimi', 'Kassab', 'Khalil', 'Khoury', 'Maalouf', 'Mansour', 'Mousa', 
             'Mustafa', 'Najjar', 'Nasr', 'Nazir', 'Obeid', 'Qureshi', 'Rashid', 'Saleh', 
-            'Samir', 'Salim', 'Saleh', 'Shihab', 'Sharif', 'Taleb', 'Tabbara', 'Youssef', 'Zahran', 'Zaki',
+            'Samir', 'Salim', 'Shihab', 'Sharif', 'Taleb', 'Tabbara', 'Youssef', 'Zahran', 'Zaki',
         
             // Latino/Hispanic Last Names (Alphabetical)
-            'Aguilar', 'Ben\u00EDtez', 'Caballero', 'Calder\u00F3n', 'Campos', 'Castillo', 'Cervantes', 
-            'Chavez', 'Contreras', 'Cordova', 'Coronado', 'Costa', 'Delgado', 'D\u00EDaz', 'Dom\u00EDnguez', 
+            'Aguilar', 'Benítez', 'Caballero', 'Calderón', 'Campos', 'Castillo', 'Cervantes', 
+            'Chavez', 'Contreras', 'Cordova', 'Coronado', 'Costa', 'Delgado', 'Díaz', 'Domínguez', 
             'Espinoza', 'Estrada', 'Fernandez', 'Figueroa', 'Fuentes', 'Garcia', 'Guerrero', 
-            'Gutierrez', 'Heredia', 'Hern\u00E1ndez', 'Herrera', 'Jim\u00E9nez', 'Maldonado', 'Medina', 
+            'Gutierrez', 'Heredia', 'Hernández', 'Herrera', 'Jiménez', 'Maldonado', 'Medina', 
             'Mendoza', 'Montoya', 'Morales', 'Moreno', 'Navarro', 'Ortega', 'Pacheco', 'Pereira', 
             'Perez', 'Rameriz', 'Ramos', 'Restrepo', 'Rivera', 'Rojas', 'Ruiz', 'Sandoval', 'Santos', 
             'Solis', 'Torres', 'Vargas', 'Vasquez', 'Vega', 'Velasco', 'Vicente', 'Villareal',
         
             // European Last Names (Alphabetical)
-            'Almeida', '\u00C5kesson', 'Becker', 'B\u00E9langer', 'Bauer', 'Bernard', 'Bianchi', 'Blanc', 'Bogdanovic', 'Brenner', 'Cruz', 'Conti', 'Cvetkovic', 'Durand', 'Dubois',
-            'Dunne', 'Dahl', 'Delgado', 'Ekstr\u00F6m',
+            'Almeida', 'Åkesson', 'Becker', 'Bélanger', 'Bauer', 'Bernard', 'Bianchi', 'Blanc', 'Bogdanovic', 'Brenner', 'Cruz', 'Conti', 'Cvetkovic', 'Durand', 'Dubois',
+            'Dunne', 'Dahl', 'Delgado', 'Ekström',
             'Eriksson', 'Fontaine', 'Fischer', 'Garrido', 'Gauthier', 'Hoffman', 'Ivanovic', 'Jennings', 'Jenson', 
             'Johansson', 'Kowalski', 'Krawczyk', 'Larsson', 'Leroy', 'Lundberg', 'Makris', 'Meier',
-            'McPierce', 'Miller', 'M\u00FCller, 'Millington', 'Moreau', 'Nelson', 'Nielsen', 'Novak', 
+            'McPierce', 'Miller', 'Müller', 'Millington', 'Moreau', 'Nelson', 'Nielsen', 'Novak', 
             'Nowak', 'O\'Connor', 'Makarov', 'Pearson', 'Petrov', 'Ricci', 'Rossi', 'Ribeiro', 'Roux', 'Rousseau', 
-            'Salvadori', 'Schneider', 'Sokolova', 'Szab\u00F3', 'Volkov', 'Wagner', 'Weber', 'Zappa', 'Zervos',
+            'Salvadori', 'Schneider', 'Sokolova', 'Szabó', 'Volkov', 'Wagner', 'Weber', 'Zappa', 'Zervos',
         
             // Other Last Names (Alphabetical)
             'Adams', 'Asante', 'Ashworth', 'Bailey', 'Baker', 'Brooks', 'Butler', 'Cai', 
             'Campbell', 'Carter', 'Chambers', 'Christensen', 'Clark', 'Collins', 'Cooper', 
-            'Cross', 'Davis', 'Dvo\u0159\u00E1k', 'Edwards', 'Elliott', 'Finch', 'Fletcher', 'Ford', 'Goodwin', 
+            'Cross', 'Davis', 'Dvořák', 'Edwards', 'Elliott', 'Finch', 'Fletcher', 'Ford', 'Goodwin', 
             'Gray', 'Green', 'Grey', 'Hall', 'Hamilton', 'Hammond', 'Hanson', 'Harris', 
-            'Hoover', 'Howard', 'Hutchinson', 'Jackson', 'Johnson', 'J\u00F8rgensen', 'Knight', 'Lewis', 'Lucas', 
+            'Hoover', 'Howard', 'Hutchinson', 'Jackson', 'Johnson', 'Jørgensen', 'Knight', 'Lewis', 'Lucas', 
             'Martin', 'McKnight', 'Mensah', 'Mercado', 'Mitchell', 'Monroe', 'Montgomery', 
             'Moore', 'Morrison', 'Okonkwo', 'Ravencroft', 'Reed', 
             'Richardson', 'Robinson', 'Russell', 'Sanford', 'Saunders', 'Scott', 'Silverton', 
@@ -458,18 +464,9 @@
             'Anker 8-in-1 USB Hub', 'Cisco Router SG220-26', 'Forge Obsidian Mechanical Keyboard',
             'NetGear Q45 Router', 'Phantom X11 Pro Gaming Mouse', 'AudioCraft Resonance Headphones', 'Aurelia ProVision 34" OLED Monitor',
             'Samsung T7 8TB SSD', 'Western Digital G-Drive Ultra 16TB', 'SeaGate IronWolf 24TB',
-            'CalDigit TS4 Docking Station', 'ASUS Thunderbolt Dock USB-C', '',
+            'CalDigit TS4 Docking Station', 'ASUS Thunderbolt Dock USB-C',
             'Bose QC45 Bluetooth Speaker', 'Netgear Nighthawk AX12 Router'
         ];
-
-        const assetBrand = [
-            'ASUS', 'Dell', 'BenQ', 'Samsung', 'Logitech', 'Belkin', 'LG', 'Corsair',
-            'SteelSeries', 'HyperX', 'Kensington', 'Catalyst', 'Western Digital', 'SeaGate', 'Elgado'
-        ]
-
-        const assetName = [
-            'T1', 'T2', 'AX4', '8-in-1 USB Hub', 'Thunderbolt Dock USB-C', 'Z9 Router', 'Aerox Pro'
-        ]
 
         const macDevices = [
             'Macbook', 'MB', 'Apple Macbook'
@@ -524,11 +521,11 @@
             
             // Data & Analytics
             'Data Analyst', 'Senior Data Scientist', 'Business Intelligence Analyst II',
-            'Analytics Manager', 'Directer of Data Engineering', 'VP of Data & Analytics',
+            'Analytics Manager', 'Director of Data Engineering', 'VP of Data & Analytics',
             
             // Customer Success
             'Customer Success Representative', 'Senior Customer Success Manager', 'Customer Success Specialist II',
-            'Customer Experience Manager', 'Senior Account Manager', 'Directer of Customer Success',
+            'Customer Experience Manager', 'Senior Account Manager', 'Director of Customer Success',
             
             // Legal & Compliance
             'Legal Assistant', 'Senior Corporate Counsel', 'General Counsel', 'Compliance Officer Level II',
@@ -539,7 +536,7 @@
             'VP of Snack Operations', 'Coffee Quality Assurance Manager', 'Senior Emoji Specialist', 'Chief Procrastination Officer',
             'Lead Rubber Duck Debugger', 'Director of Office Plants', 'Senior Overthinking Consultant', 'Principal Chaos Engineer',
             'VP of Meeting About Meetings', 'Chief Fun Police', 'Director of Existential Crisis Management',
-            'Chief Wizard', 'Senior Deadline Whisperer', 'Sock Puppet Strategist', 'Top Hat Magician', '',
+            'Chief Wizard', 'Senior Deadline Whisperer', 'Sock Puppet Strategist', 'Top Hat Magician',
             'VP of Overthinking', 'Lead Conspiracy Theory Debunker', 'Professional Meeting Attender', 'Fashion Police Officer',
             'Pro Wrestler', 'Chief Nap Advisor', 'Lead Cereal Taster', 'Puppy Concierge', 'Senior Pen Cap Chewer', 
             'Director of Explaining Things Twice', 'Principal Cat Video Quality Controller', 'VP of Making Things Look Busy', 'Senior Parking Spot Negotiator',
@@ -569,7 +566,7 @@
         ];
 
         const appTypes = [
-            'Cipher', 'Vector', 'Helix', 'Dimension', 'Parallax', 'Kinetic', 'Axiom', 'Vortex', 'Vector',
+            'Cipher', 'Vector', 'Helix', 'Dimension', 'Parallax', 'Kinetic', 'Axiom', 'Vortex', 
             'Paradigm', 'Proton'
         ];
 
@@ -606,10 +603,8 @@
         }
 
         function generateAddress() {
-            // const number = randomNumber(1, 9999);
-            const digitCount = Math.floor(Math.random() * 5) + 1; // 1-5 digits
-            const min = digitCount === 1 ? 1 : Math.pow(10, digitCount - 1);
-            const max = Math.pow(10, digitCount) - 1;
+            const ranges = [[1,9], [10,99], [100,999], [1000,9999], [10000,99999]];
+            const [min, max] = randomChoice(ranges);
             const number = randomNumber(min, max);
             const street = randomChoice(streets);
             const city = randomChoice(cities);
@@ -633,13 +628,12 @@
             const area = randomNumber(200, 999);
             const exchange = randomNumber(200, 999);
             const number = randomDigits(4);
-            const result = `(${area})${exchange}-${number}`;
+            const result = `(${area}) ${exchange}-${number}`;
             updateOutput('phone-output', result);
         }
 
         function generateAsset() {
             const asset = randomChoice(assets);
-            // const id = randomAlphanumeric(3) + randomDigits(4);
             const result = `${asset}`;
             updateOutput('asset-output', result);
         }
@@ -657,10 +651,7 @@
 
         function generateWindowsDevice() {
             const device = randomChoice(windowsDevices);
-            const processor = randomChoice(['Intel i7-13700H', 'Intel i5-12600H', 'AMD Ryzen 7 6800H', 'Intel i7-1365U']);
-            const ram = randomChoice(['16GB', '32GB', '8GB']);
-            const storage = randomChoice(['512GB SSD', '1TB SSD', '256GB SSD']);
-            const result = `${device} (${processor} ${ram} RAM ${storage})`;
+            const result = `${device}`;
             updateOutput('windows-output', result);
         }
 
@@ -734,7 +725,6 @@
             
             const generators = {
                 names: () => `${randomChoice(firstNames)} ${randomChoice(lastNames)}`,
-                // addresses: () => `${randomNumber(1, 9999)} ${randomChoice(streets)}, ${randomChoice(cities)}, ${randomChoice(states)} ${randomDigits(5)}`,
                 addresses: () => {
                     const ranges = [[1,9], [10,99], [100,999], [1000,9999], [10000,99999]];
                     const [min, max] = randomChoice(ranges);
