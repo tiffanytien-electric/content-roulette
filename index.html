@@ -711,8 +711,7 @@
             const formats = [
                 `${name} ${type}`,
                 `${name} ${randomChoice(organizationNames)} ${type}`,
-                `${randomChoice(organizationNames)} ${name} ${type}`,
-                `${randomChoice(organizationNames)} ${name} ${name} ${type}`
+                `${randomChoice(organizationNames)} ${name} ${type}`
             ];
             const result = randomChoice(formats);
             updateOutput('org-output', result);
@@ -771,8 +770,7 @@
                     const formats = [
                         `${name} ${type}`,
                         `${name} ${randomChoice(organizationNames)} ${type}`,
-                        `${randomChoice(organizationNames)} ${name} ${type}`,
-                        `${randomChoice(organizationNames)} ${name} ${name} ${type}`
+                        `${randomChoice(organizationNames)} ${name} ${type}`
                     ];
                     return randomChoice(formats);
                 },
