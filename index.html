@@ -436,11 +436,11 @@
 
         const streets = [
             'Main', 'Oak', 'Park', 'Memory', 'Washington', 'First', 'Second', 'Maple',
-            'Cedar Ln', 'Pine', 'Lincoln ', 'Madison', 'Jackson', 'Franklin', 'Church', 'Cove',
-            'Vista Way', 'Meadow', 'Sand', 'Ridge Rd', 'Neon Circuit Blvd', 'Quantum',
-            'Binary Blvd', 'Chrome', 'Hyperdrive Way', 'Frequency Ln', 'Boardwalk', 'Dragon Boat',
-            'Rainbow Rd', 'Plasma', 'Digital Loop', 'Echo Lake', 'Melody Loop', 'Zen Circle',
-            'Mill Rd', 'Marsh', 'Highlander', 'Stargate Way', 'Bell.', 'Golden', 'Wisteria',
+            'Cedar', 'Pine', 'Lincoln ', 'Madison', 'Jackson', 'Franklin', 'Church', 'Cove',
+            'Vista Way', 'Meadow', 'Sand', 'Ridge Rd', 'Neon Circuit', 'Quantum',
+            'Binary', 'Chrome', 'Hyperdrive', 'Frequency', 'Boardwalk', 'Dragon Boat',
+            'Rainbow', 'Plasma', 'Digital', 'Echo Lake', 'Melody', 'Zen Circle',
+            'Mill', 'Marsh', 'Highlander', 'Stargate', 'Bell', 'Golden', 'Wisteria',
             'Mockingbird', 'Union', 'Fleet', 'Paper', 'Cherry Tree'
         ];
 
@@ -738,7 +738,13 @@
                     const ranges = [[1,9], [10,99], [100,999], [1000,9999], [10000,99999]];
                     const [min, max] = randomChoice(ranges);
                     const houseNumber = randomNumber(min, max);
-                    return `${houseNumber} ${randomChoice(streets)}, ${randomChoice(cities)}, ${randomChoice(states)} ${randomDigits(5)}`;
+                    const street = randomChoice(streets);
+                    const streetSuffix = randomChoice(streetSuffixes); // Add this line
+                    const city = randomChoice(cities);
+                    const state = randomChoice(states);
+                    const zip = randomDigits(5);
+                    // Include the streetSuffix in the result
+                    return `${houseNumber} ${street} ${streetSuffix}, ${city}, ${state} ${zip}`;
                 },
                 ups: () => `1Z${randomAlphanumeric(6)}${randomDigits(8)}${Math.floor(Math.random() * 10)}`,
                 phones: () => `(${randomNumber(200, 999)}) ${randomNumber(200, 999)}-${randomDigits(4)}`,
