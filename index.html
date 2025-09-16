@@ -425,20 +425,23 @@
         
             // Pet Last Names (Alphabetical)
             'Cai', 'Hoover', 'Smith', 'Ternes', 'Ternes-Hoover', 'Toon Lehmann', 'Woo'
+
         ];
 
         const streets = [
-            'Main St', 'Oak Ave', 'Park Rd', 'Memory Ln', 'Washington Blvd', 'First Ave', 'Second St', 'Maple Dr',
+            'Main St', 'Oak Ave', 'Park Pl', 'Memory Ln', 'Washington Blvd', 'First Ave', 'Second St', 'Maple Dr',
             'Cedar Ln', 'Pine St', 'Lincoln Ave', 'Madison St', 'Jackson Rd', 'Franklin St', 'Church St', 'Cove Ct.',
-            'Vista Way', 'Meadow St', 'Sand Ave', 'Ridge Rd',
-            'Mill Rd', 'Marsh St', 'High St', 'Spring St', 'Lemon Tree St.', 'Center St'
+            'Vista Way', 'Meadow St', 'Sand Ave', 'Ridge Rd', 'Neon Circuit Blvd', 'Quantum Ave',
+            'Binary Blvd', 'Chrome St', 'Hyperdrive Way', 'Frequency Ln', 'Boardwalk Dr',
+            'Rainbow Rd', 'Plasma Ave', 'Digital Loop', 'Echo Lake', 'Melody Loop',
+            'Mill Rd', 'Marsh Ave', 'Highlander St', 'Stargate Way', 'Bell St.', 'Golden Rd'
         ];
 
         const cities = [
-            'Springfield', 'Franklin', 'Georgetown', 'Arlington', 'Fairview', 'Madison', 'Salem', 'Richmond',
+            'Springfield', 'Franklin', 'Georgetown', 'Arlington', 'Fairview', 'Richmond', 'Aurora Bay',
             'Oakland', 'Ashland', 'Burlington', 'Manchester', 'Oxford', 'Clayton', 'Hudson', 'Kingston',
-            'Baybrook', 'Forestdale', 'Plains', 'Summitville',
-            'River City', 'Pleasant Hill', 'Greenwood', 'Brookfield', 'Awkwardville', 'Mountainview'
+            'Baybrook', 'Forestdale', 'Cyclone Valley', 'Cosmos City', 'Kaleidoscope Falls', 'Jade Harbor',
+            'River City', 'Raven\'s Hollow', 'Greenwood', 'Brookfield', 'Awkwardville', 'Mountainview'
         ];
 
         const states = [
@@ -626,7 +629,7 @@
             const area = randomNumber(200, 999);
             const exchange = randomNumber(200, 999);
             const number = randomDigits(4);
-            const result = `(${area}) ${exchange}-${number}`;
+            const result = `(${area})${exchange}-${number}`;
             updateOutput('phone-output', result);
         }
 
