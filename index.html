@@ -428,15 +428,17 @@
         ];
 
         const streets = [
-            'Main St', 'Oak Ave', 'Park Rd', 'Elm St', 'Washington Blvd', 'First Ave', 'Second St', 'Maple Dr',
-            'Cedar Ln', 'Pine St', 'Lincoln Ave', 'Madison St', 'Jackson Rd', 'Franklin St', 'Church St',
-            'Mill Rd', 'School St', 'High St', 'Spring St', 'Lemon Tree St.', 'Center St'
+            'Main St', 'Oak Ave', 'Park Rd', 'Memory Ln', 'Washington Blvd', 'First Ave', 'Second St', 'Maple Dr',
+            'Cedar Ln', 'Pine St', 'Lincoln Ave', 'Madison St', 'Jackson Rd', 'Franklin St', 'Church St', 'Cove Ct.',
+            'Vista Way', 'Meadow St', 'Sand Ave', 'Ridge Rd',
+            'Mill Rd', 'Marsh St', 'High St', 'Spring St', 'Lemon Tree St.', 'Center St'
         ];
 
         const cities = [
             'Springfield', 'Franklin', 'Georgetown', 'Arlington', 'Fairview', 'Madison', 'Salem', 'Richmond',
             'Oakland', 'Ashland', 'Burlington', 'Manchester', 'Oxford', 'Clayton', 'Hudson', 'Kingston',
-            'River City', 'Pleasant Hill', 'Greenwood', 'Brookfield', 'Awkwardville'
+            'Baybrook', 'Forestdale', 'Plains', 'Summitville',
+            'River City', 'Pleasant Hill', 'Greenwood', 'Brookfield', 'Awkwardville', 'Mountainview'
         ];
 
         const states = [
@@ -457,14 +459,7 @@
         ];
 
         const macDevices = [
-            'Dell UltraSharp 27" Monitor U2723QE', 'Apple Studio 5K Retina Display 27"', 'LG 27" 4K UHD UltraFine IPS Monitor',
-            'HP Series 7 Pro 27 inch 4K Thunderbolt 4 Monitor', 'ASUS VZ279 Gaming Monitor',
-            'Apple Magic Keyboard USB-C', 'Razer Pro Type Ultra - Wireless Keyboard', 'Logitech MX Keyboard',
-            'Lunar Artefacts Mouse', 'Apple Magic Mouse 2 (USB-C)', 'SteelSeries Aerox 9 Gaming Mouse', 'Logitech Wireless Mouse MX3',
-            'Anker 8-in-1 USB Hub', 'Cisco Router SG220-26', 
-            'Samsung T7 8TB SSD', 'Western Digital G-Drive Ultra 16TB', 'SeaGate IronWolf 24TB',
-            'CalDigit TS4 Docking Station', 'ASUS Thunderbolt Dock USB-C',
-            'Bose QC45 Bluetooth Speaker', 'Netgear Nighthawk AX12 Router'
+            'Macbook'
         ];
 
         const windowsDevices = [
@@ -474,23 +469,68 @@
             'Lenovo ThinkPad X1 Carbon Gen 11 (14" Intel i7-1365U 32GB RAM 1TB SSD)', 'ASUS ZenBook Pro 14 OLED (14.5" Intel i9-13900H 32GB RAM 1TB SSD)',
             'Microsoft Surface Laptop Studio 2 (14.4" Intel i7-13700H 32GB RAM 1TB SSD)', 'Alienware x14 R2 Gaming Laptop (14" Intel i7-13620H 16GB RAM 512GB SSD RTX 4050)',
             'HP Envy 15 (15.6" AMD Ryzen 7 5825U 16GB RAM 512GB SSD)', 'Dell Inspiron 16 Plus (16" Intel i7-12700H 16GB RAM 512GB SSD RTX 3060)',
-            'Lenovo Legion 5 Pro (16" AMD Ryzen 7 6800H 16GB RAM 1TB SSD RTX 3070 Ti)', 'ASUS Zephyrus G14 (14" AMD Ryzen 9 6900HS 32GB RAM 1TB SSD)'
+            'Lenovo Legion 5 Pro (16" AMD Ryzen 7 6800H 16GB RAM 1TB SSD RTX 3070 Ti)', 'ASUS Zephyrus G14 (14" AMD)'
         ];
 
         const jobTitles = [
-            // Tech
-            'Senior Software Engineer', 'DevOps Engineer', 'Data Scientist', 'UX Designer', 'Product Manager',
-            'Full Stack Developer', 'Machine Learning Engineer', 'Cloud Architect', 'Cybersecurity Specialist',
-            // Professional
-            'Project Manager', 'Business Analyst', 'Marketing Director', 'Sales Representative', 'HR Coordinator',
-            'Financial Analyst', 'Operations Manager', 'Customer Success Manager',
-            // Funny
+            // Finance
+            'Senior Financial Analyst', 'Tax Specialist Level II',
+            'Investment Banking Associate', 'Director of Risk Management', 'VP of Corporate Finance',
+            
+            // Engineering
+            'Software Engineer', 'Senior Backend Developer', 'DevOps Engineer Level III', 'Principal Software Architect',
+            'Data Engineer', 'Senior Full Stack Developer', 'Machine Learning Engineer II', 'Engineering Manager',
+            
+            // Design
+            'Senior Product Designer', 'Creative Director', 'UI/UX Designer Level II',
+            'Brand Designer', 'Senior Visual Designer', 'Design System Lead',
+            
+            // Marketing
+            'Marketing Coordinator', 'Senior Digital Marketing Manager', 'Content Marketing Specialist II',
+            'Brand Marketing Director', 'Senior Growth Marketing Manager', 'Performance Marketing Lead', 'VP of Marketing',
+            
+            // Sales
+            'Sales Representative', 'Senior Account Executive', 'Sales Director', 'Business Development Manager II',
+            'Enterprise Sales Manager', 'Senior Customer Success Manager', 'Regional Sales Director',
+            
+            // HR
+            'HR Coordinator', 'Senior People Operations Manager', 'CHRO', 'Talent Acquisition Specialist II',
+            'Employee Relations Manager', 'Senior Compensation Analyst', 'Organizational Development Director', 'VP of People & Culture',
+            
+            // IT
+            'IT Specialist', 'Senior Systems Administrator', 'Network Engineer Level III',
+            'Cybersecurity Manager', 'Senior Cloud Architect', 'IT Operations Director', 'Chief Information Security Officer',
+            
+            // Product
+            'Product Manager', 'Senior Product Manager', 'Associate Product Manager II',
+            'Technical Product Manager', 'Senior Product Marketing Manager', 'Director of Product Strategy', 'VP of Product',
+            
+            // Operations
+            'Operations Coordinator', 'Senior Operations Manager', 'Supply Chain Analyst Level II',
+            'Process Improvement Manager', 'Senior Project Manager', 'Operations Excellence Director', 'VP of Operations',
+            
+            // Data & Analytics
+            'Data Analyst', 'Senior Data Scientist', 'Business Intelligence Analyst II',
+            'Analytics Manager', 'Directer of Data Engineering', 'VP of Data & Analytics',
+            
+            // Customer Success
+            'Customer Success Representative', 'Senior Customer Success Manager', 'Customer Success Specialist II',
+            'Customer Experience Manager', 'Senior Account Manager', 'Directer of Customer Success',
+            
+            // Legal & Compliance
+            'Legal Assistant', 'Senior Corporate Counsel', 'General Counsel', 'Compliance Officer Level II',
+            'Senior Legal Operations Manager', 'Chief Compliance Officer',
+            
+            // Silly Job Titles
             'Chief Happiness Officer', 'Senior Meme Analyst', 'Director of Cat Herding', 'Nap Coordinator',
-            'VP of Snack Operations', 'Coffee Quality Assurance Manager', 'Senior Emoji Specialist',
-            'Chief Procrastination Officer', 'Lead Rubber Duck Debugger', 'Director of Office Plants',
-            'Senior Overthinking Consultant', 'Principal Chaos Engineer', 'VP of Meeting About Meetings',
-            'Chief Fun Police', 'Director of Existential Crisis Management', 'Senior Deadline Whisperer',
-            'Professional Meeting Attender', 'Chief Microwave Timer Expert', 'VP of Untangling Headphones'
+            'VP of Snack Operations', 'Coffee Quality Assurance Manager', 'Senior Emoji Specialist', 'Chief Procrastination Officer',
+            'Lead Rubber Duck Debugger', 'Director of Office Plants', 'Senior Overthinking Consultant', 'Principal Chaos Engineer',
+            'VP of Meeting About Meetings', 'Chief Fun Police', 'Director of Existential Crisis Management',
+            'Chief Wizard', 'Senior Deadline Whisperer', 'Sock Puppet Strategist', 'Top Hat Magician', '',
+            'VP of Overthinking', 'Lead Conspiracy Theory Debunker', 'Professional Meeting Attender', 'Fashion Police Officer',
+            'Pro Wrestler', 'Chief Nap Advisor', 'Lead Cereal Taster', 'Puppy Concierge', 'Senior Pen Cap Chewer', 
+            'Director of Explaining Things Twice', 'Principal Cat Video Quality Controller', 'VP of Making Things Look Busy', 'Senior Parking Spot Negotiator',
+            'Chief Microwave Timer Expert','VP of Untangling Headphones', 'Senior YOLO Operative'
         ];
 
         const personalEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com', 'aol.com'];
@@ -502,26 +542,23 @@
         ];
 
         const organizationNames = [
-            'Apex', 'Global', 'Metro', 'Elite', 'Prime', 'Summit', 'Stellar', 'Dynamic', 'Innovative', 'Advanced',
+            'Apex', 'Global', 'Metro', 'Elite', 'Prime', 'Summit', 'Stellar', 'Ripple', 'Innovative', 'Advanced',
             'Strategic', 'Premier', 'Progressive', 'Digital', 'Future', 'Smart', 'Quantum', 'Alpha', 'Beta', 'Omega',
             'Nexus', 'Catalyst', 'Pinnacle', 'Zenith', 'Vertex', 'Matrix', 'Phoenix', 'Titan', 'Atlas', 'Vector',
+            'Prism', 'Griffin', 'Squirrel', 'Mosaic', 'Nexus', 'Pulsewave', 'Zip', 'Flare', 'Echo',
             'Synergy', 'Fusion', 'Velocity', 'Momentum', 'Impact', 'Vision', 'Horizon', 'Paradigm', 'Infinity', 'Unity'
         ];
 
         const appPrefixes = [
-            'Quick', 'Smart', 'Easy', 'Fast', 'Super', 'Ultra', 'Mega', 'Pro', 'Max', 'Plus', 'Go', 'My', 'The', 
-            'Best', 'Top', 'Instant', 'Turbo', 'Power', 'Elite', 'Prime', 'Alpha', 'Beta', 'Zen', 'Neo', 'Meta'
+            'Quick', 'Smart', 'Fast', 'Super', 'Ultra', 'Mega', 'Pro', 'Max', 'Plus', 'Go', 'My', 'The', 
+            'Omni', 'Aero', 'Eclectic', 'Nano', 'Magna',
+            'Best', 'Top', 'Turbo', 'Power', 'Elite', 'Prime', 'Alpha', 'Beta', 'Zen', 'Neo', 'Meta'
         ];
 
         const appSuffixes = [
-            'Hub', 'Zone', 'Pro', 'Max', 'Plus', 'Go', 'Now', 'Express', 'Lite', 'Premium', 'Studio', 'Lab', 
+            'Hub', 'Zone', 'Pro', 'Max', 'Plus', 'Go', 'Now', 'Express', 'Lite', 'Premium', 'Studio', 'Lab',
+            'Craft', 'Sphere', 'Stack', 'Core', 'Path', 'Vault',
             'Works', 'Tools', 'Suite', 'Box', 'Kit', 'Desk', 'Space', 'Cloud', 'Link', 'Connect', 'Sync', 'Flow'
-        ];
-
-        const appTypes = [
-            'Task', 'Note', 'Photo', 'Video', 'Music', 'Chat', 'Mail', 'Calendar', 'Weather', 'News', 'Food', 
-            'Travel', 'Health', 'Fitness', 'Money', 'Budget', 'Shop', 'Game', 'Learn', 'Read', 'Write', 'Draw', 
-            'Code', 'Design', 'Plan', 'Track', 'Monitor', 'Share', 'Stream', 'Edit', 'Scan', 'Convert', 'Backup'
         ];
 
         // Utility functions
@@ -580,17 +617,19 @@
 
         function generateAsset() {
             const asset = randomChoice(assets);
-            const id = randomAlphanumeric(3) + randomDigits(4);
-            const result = `${asset} (${id})`;
+            // const id = randomAlphanumeric(3) + randomDigits(4);
+            const result = `${asset})`;
             updateOutput('asset-output', result);
         }
 
         function generateMacDevice() {
             const device = randomChoice(macDevices);
+            const model = randomChoice(['Air', 'Pro']);
+            const cpu = randomChoice(['M3', 'M4', 'M4 Pro', 'M4 Max']);
             const year = randomChoice(['2024', '2025', '2026']);
             const storage = randomChoice(['256GB', '512GB', '1TB', '2TB']);
             const ram = randomChoice(['16GB', '32GB', '64GB']);
-            const result = `${device} (${year} ${ram} RAM ${storage} SSD)`;
+            const result = `${device} ${model} ${cpu} (${year} ${ram} RAM ${storage} SSD)`;
             updateOutput('mac-output', result);
         }
 
