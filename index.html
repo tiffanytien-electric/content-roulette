@@ -615,11 +615,11 @@
             const [min, max] = randomChoice(ranges);
             const number = randomNumber(min, max);
             const street = randomChoice(streets);
-            const streetSuffix = randomChoice(streetSuffix);
+            const streetSuffix = randomChoice(streetSuffixis);
             const city = randomChoice(cities);
             const state = randomChoice(states);
             const zip = randomDigits(5);
-            const result = `${number} ${street} ${streetSuffix}, ${city}, ${state} ${zip}`;
+            const result = `${number} ${street} ${streetSuffixis}, ${city}, ${state} ${zip}`;
             updateOutput('address-output', result);
         }
 
