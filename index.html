@@ -764,15 +764,27 @@
 
         function generateApp() {
             const formats = [
-                () => `${randomChoice(appPrefixes)}${randomChoice(appTypes)}`,
-                () => `${randomChoice(appTypes)}${randomChoice(appSuffixes)}`,
-                () => `${randomChoice(appPrefixes)}${randomChoice(appTypes)}${randomChoice(appSuffixes)}`,
-                () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
-                () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`
+                () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`, // Added space
+                () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Added space  
+                () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Added spaces
+                () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Already has space
+                () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}` // Already has space
             ];
             const result = randomChoice(formats)();
             updateOutput('app-output', result);
         }
+
+// Also fix the bulk generator - replace the apps section with:
+apps: () => {
+    const formats = [
+        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`, // Added space
+        () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Added space
+        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Added spaces
+        () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Already has space
+        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}` // Already has space
+    ];
+    return randomChoice(formats)();
+}
 
         function updateOutput(elementId, content) {
             const element = document.getElementById(elementId);
@@ -821,9 +833,9 @@
                 },
                 apps: () => {
                     const formats = [
-                        () => `${randomChoice(appPrefixes)}${randomChoice(appTypes)}`,
-                        () => `${randomChoice(appTypes)}${randomChoice(appSuffixes)}`,
-                        () => `${randomChoice(appPrefixes)}${randomChoice(appTypes)}${randomChoice(appSuffixes)}`,
+                        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`,
+                        () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
+                        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
                         () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
                         () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`
                     ];
