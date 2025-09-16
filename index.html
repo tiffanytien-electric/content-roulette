@@ -452,14 +452,24 @@
             'HP Series 7 Pro 27 inch 4K Thunderbolt 4 Monitor', 'ASUS VZ279 Gaming Monitor',
             'Apple Magic Keyboard USB-C', 'Razer Pro Type Ultra - Wireless Keyboard', 'Logitech MX Keyboard',
             'Lunar Artefacts Mouse', 'Apple Magic Mouse 2 (USB-C)', 'SteelSeries Aerox 9 Gaming Mouse', 'Logitech Wireless Mouse MX3',
-            'Anker 8-in-1 USB Hub', 'Cisco Router SG220-26', 
+            'Anker 8-in-1 USB Hub', 'Cisco Router SG220-26', 'Forge Obsidian Mechanical Keyboard',
+            'NetGear Q45 Router', 'Phantom X11 Pro Gaming Mouse', 'AudioCraft Resonance Headphones', 'Aurelia ProVision 34" OLED Monitor',
             'Samsung T7 8TB SSD', 'Western Digital G-Drive Ultra 16TB', 'SeaGate IronWolf 24TB',
-            'CalDigit TS4 Docking Station', 'ASUS Thunderbolt Dock USB-C',
+            'CalDigit TS4 Docking Station', 'ASUS Thunderbolt Dock USB-C', '',
             'Bose QC45 Bluetooth Speaker', 'Netgear Nighthawk AX12 Router'
         ];
 
+        const assetBrand = [
+            'ASUS', 'Dell', 'BenQ', 'Samsung', 'Logitech', 'Belkin', 'LG', 'Corsair',
+            'SteelSeries', 'HyperX', 'Kensington', 'Catalyst', 'Western Digital', 'SeaGate', 'Elgado'
+        ]
+
+        const assetName = [
+            'T1', 'T2', 'AX4', '8-in-1 USB Hub', 'Thunderbolt Dock USB-C', 'Z9 Router', 'Aerox Pro'
+        ]
+
         const macDevices = [
-            'Macbook'
+            'Macbook', 'MB', 'Apple Macbook'
         ];
 
         const windowsDevices = [
@@ -623,7 +633,7 @@
         function generateAsset() {
             const asset = randomChoice(assets);
             // const id = randomAlphanumeric(3) + randomDigits(4);
-            const result = `${asset})`;
+            const result = `${asset}`;
             updateOutput('asset-output', result);
         }
 
