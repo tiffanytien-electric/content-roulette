@@ -323,35 +323,35 @@
     <script>
         // Data arrays
         const firstNames = [
-            // East Asian First Names (Alphabetical)
+            // East Asian First Names
             'Aki', 'Dae-hyun', 'Doyun', 'Eun-ji', 'Feng', 'Hana', 'Hanzo', 'Haruto', 'Hiroshi', 
             'Jiao', 'Jin', 'Jing', 'Jun', 'Kai', 'Kei', 'Kenji', 'Linh', 'Lixin', 'Megumi', 
             'Mei-Ling', 'Minh', 'Misako', 'Niran', 'Qiang', 'Rei', 'Ren', 'Rong', 'Ryo', 
             'Sakura', 'Shinji', 'Sohyeon', 'Sung-min', 'Takumi', 'Wei-Ming', 'Xiao-Yu', 'Yin', 
             'Yuki', 'Zhi-Wei',
         
-            // South Asian First Names (Alphabetical)
+            // South Asian First Names
             'Aarav', 'Akash', 'Amit', 'Anand', 'Asha', 'Anish', 'Anjali', 'Ari', 'Arjun', 
             'Arya', 'Avni', 'Divya', 'Diya', 'Ira', 'Jaya', 'Kavya', 'Kiran', 'Manish', 
             'Meera', 'Neel', 'Naveen', 'Nikhil', 'Niraj', 'Nisha', 'Nylah', 'Piyush', 'Pooja', 
             'Pradeep', 'Preet', 'Raghav', 'Raj', 'Rashika', 'Ravi', 'Riya', 'Rohit', 'Sanjay', 
             'Shaan', 'Shreya', 'Sonal', 'Suresh', 'Swati', 'Varun', 'Vikram',
         
-            // Middle Eastern/North African First Names (Alphabetical)
+            // Middle Eastern/North African First Names
             'Ahmed', 'Amani', 'Amira', 'Bassam', 'Dina', 'Eden', 'Fatima', 'Farah', 'Fouad', 'Hala', 
             'Hassan', 'Iman', 'Jamal', 'Karim', 'Laith', 'Lamar', 'Lana', 'Layla', 'Leila', 
             'Marwan', 'Mazen', 'Mona', 'Musa', 'Nadia', 'Nasser', 'Noor', 'Nour', 'Omar', 'Rami', 
             'Rana', 'Rania', 'Reza', 'Salam', 'Salem', 'Salim', 'Samar', 'Soraya', 'Tariq', 
             'Walid', 'Yasmin', 'Yusuf', 'Zahra', 'Ziad', 'Zuri',
         
-            // Latino/Hispanic First Names (Alphabetical)
+            // Latino/Hispanic First Names
             'Adrián', 'Alejandro', 'Andrea', 'Andrés', 'Camila', 'Carlos', 'Carmen', 'Cecilia',
             'César', 'Daniela', 'Diego', 'Elena', 'Éloïse', 'Emilio', 'Esperanza', 'Fabian', 'Fernando',
             'Gabriel', 'Gabriella', 'Isabella', 'Isaú', 'Joaquín', 'Katalina', 'Lidia', 'Lucía', 
             'Luis', 'Marisa', 'Mateo', 'Miguel', 'Natalia', 'Pablo', 'Rafael', 'Santiago', 
             'Sofía', 'Tomas',
         
-            // European First Names (Alphabetical)
+            // European First Names
             'Alessandro', 'Anja', 'Amélie', 'Anton', 'Armando', 'Astrid', 'Beatrice', 'Brigitte', 'Camille',
             'Claudia', 'Dimitri', 'Dominik', 'Dorothea', 'Emma', 'Erik', 'Enzo', 'Francesca', 'Giovanni', 'Hans',
             'Heidi', 'Henrik', 'Hugo', 'Inés', 
@@ -370,19 +370,19 @@
             'Philip', 'Philippa', 'Phoenix', 'Riley', 'Sage', 'Sebastian', 'Serena', 'Shayla', 'Stella', 
             'Tarkus', 'Tasha', 'Terrell', 'Vera', 'Wren', 'Zara', 'Zephyr', 'Zion',
         
-            // Pet First Names (Alphabetical)
+            // Pet First Names
             'Casey', 'Chloe', 'Conner', 'Daisy', 'J.B.', 'Mac', 'Mochi', 'Murray', 'Yeppy'
         ];
 
         const lastNames = [
-            // East Asian Last Names (Alphabetical)
+            // East Asian Last Names
             'Ang', 'Cha', 'Chen', 'Choi', 'Dao', 'Fan', 'Fujiwara', 'Hasashi', 'Han', 'Huang', 'Jang','Jeong', 
             'Kang', 'Kim', 'Kitada', 'Kobayashi', 'Koh', 'Kwok', 'Lam', 'Li', 'Liang', 
             'Lim', 'Liu', 'Nakamura', 'Nguyen', 'Park', 'Pham', 'Qing', 'Sato', 'Soh', 
             'Song', 'Shin', 'Takagi', 'Takahashi', 'Tanaka', 'Tao', 'Thanh', 'Tian', 'Tran', 'Tsai', 
             'Tsao', 'Wei', 'Wu', 'Yamada', 'Yamamoto', 'Zhang', 'Zhou', 'Zhu',
         
-            // South Asian Last Names (Alphabetical)
+            // South Asian Last Names
             'Agarwal', 'Ahsan', 'Banerjee', 'Banu', 'Bhagat', 
             'Chandra', 'Chatterjee', 'Chopra', 'Das', 'Desai', 'Dutta', 'Ghosh', 'Gupta', 
             'Iyer', 'Joshi', 'Kapoor', 'Khanna', 'Krishnan', 'Kulkarni', 'Kumar', 'Majumdar', 
@@ -390,7 +390,7 @@
             'Prasad', 'Raghavan', 'Rao', 'Reddy', 'Shah', 'Sharma', 
             'Singh', 'Srinivasan', 'Sood', 'Thakur', 'Tiwari', 'Verma', 'Yadav',
         
-            // Middle Eastern/North African Last Names (Alphabetical)
+            // Middle Eastern/North African Last Names
             'Abadi', 'Abdelaziz', 'Adnan', 'Aziz', 
             'Azouri', 'Barakat', 'Bashara', 'Basir', 'Dawood', 'El-Sayed', 'Farouk', 'Gamal', 
             'Habib', 'Hakim', 'Hashim', 'Issa', 'Jafari', 'Joudi', 
@@ -398,7 +398,7 @@
             'Mustafa', 'Najjar', 'Nasr', 'Nazir', 'Obeid', 'Qureshi', 'Rashid', 'Saleh', 
             'Samir', 'Salim', 'Shihab', 'Sharif', 'Taleb', 'Tabbara', 'Youssef', 'Zahran', 'Zaki',
         
-            // Latino/Hispanic Last Names (Alphabetical)
+            // Latino/Hispanic Last Names
             'Aguilar', 'Benítez', 'Caballero', 'Calderón', 'Campos', 'Castillo', 'Cervantes', 
             'Chavez', 'Contreras', 'Cordova', 'Coronado', 'Costa', 'Delgado', 'Díaz', 'Domínguez', 
             'Espinoza', 'Estrada', 'Fernandez', 'Figueroa', 'Fuentes', 'Garcia', 'Guerrero', 
@@ -407,7 +407,7 @@
             'Perez', 'Rameriz', 'Ramos', 'Restrepo', 'Rivera', 'Rojas', 'Ruiz', 'Sandoval', 'Santos', 
             'Solis', 'Torres', 'Vargas', 'Vasquez', 'Vega', 'Velasco', 'Vicente', 'Villareal',
         
-            // European Last Names (Alphabetical)
+            // European Last Names
             'Almeida', 'Åkesson', 'Becker', 'Bélanger', 'Bauer', 'Bernard', 'Bianchi', 'Blanc', 'Bogdanovic', 'Brenner', 'Cruz', 'Conti', 'Cvetkovic', 'Durand', 'Dubois',
             'Dunne', 'Dahl', 'Delgado', 'Ekström',
             'Eriksson', 'Fontaine', 'Fischer', 'Garrido', 'Gauthier', 'Hoffman', 'Ivanovic', 'Jennings', 'Jenson', 
@@ -416,7 +416,7 @@
             'Nowak', 'O\'Connor', 'Makarov', 'Pearson', 'Petrov', 'Ricci', 'Rossi', 'Ribeiro', 'Roux', 'Rousseau', 
             'Salvadori', 'Schneider', 'Sokolova', 'Szabó', 'Volkov', 'Wagner', 'Weber', 'Zappa', 'Zervos',
         
-            // Other Last Names (Alphabetical)
+            // Other Last Names
             'Adams', 'Asante', 'Ashworth', 'Bailey', 'Baker', 'Brooks', 'Butler', 'Cai', 
             'Campbell', 'Carter', 'Chambers', 'Christensen', 'Clark', 'Collins', 'Cooper', 
             'Cross', 'Davis', 'Dvořák', 'Edwards', 'Elliott', 'Finch', 'Fletcher', 'Ford', 'Goodwin', 
@@ -430,7 +430,7 @@
             'Warner', 'Washington', 'Webber', 'Whitmore', 'Wilkinson', 'Wilson', 
             'Wolfslayer',
         
-            // Pet Last Names (Alphabetical)
+            // Pet Last Names
             'Cai', 'Hoover', 'Smith', 'Ternes', 'Ternes-Hoover', 'Toon Lehmann', 'Woo'
         ];
 
@@ -734,8 +734,7 @@
             updateOutput('org-output', result);
         }
         
-        // Also update the bulk generator
-        // In your generateBulk function, replace the organizations section with:
+        // Bulk generator
         organizations: () => {
             const name1 = randomChoice(organizationNames);
             const type = randomChoice(organizationTypes);
@@ -764,24 +763,24 @@
 
         function generateApp() {
             const formats = [
-                () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`, // Added space
-                () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Added space  
-                () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Added spaces
-                () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Already has space
-                () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}` // Already has space
+                () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`,
+                () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
+                () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
+                () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, 
+                () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`
             ];
             const result = randomChoice(formats)();
             updateOutput('app-output', result);
         }
 
-// Also fix the bulk generator - replace the apps section with:
+//
 apps: () => {
     const formats = [
-        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`, // Added space
-        () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Added space
+        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`,
+        () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
         () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Added spaces
-        () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Already has space
-        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}` // Already has space
+        () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
+        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`
     ];
     return randomChoice(formats)();
 }
@@ -804,11 +803,10 @@ apps: () => {
                     const [min, max] = randomChoice(ranges);
                     const houseNumber = randomNumber(min, max);
                     const street = randomChoice(streets);
-                    const streetSuffix = randomChoice(streetSuffixes); // Add this line
+                    const streetSuffix = randomChoice(streetSuffixes);
                     const city = randomChoice(cities);
                     const state = randomChoice(states);
                     const zip = randomDigits(5);
-                    // Include the streetSuffix in the result
                     return `${houseNumber} ${street} ${streetSuffix}, ${city}, ${state} ${zip}`;
                 },
                 ups: () => `1Z${randomAlphanumeric(6)}${randomDigits(8)}${Math.floor(Math.random() * 10)}`,
@@ -862,7 +860,7 @@ apps: () => {
             });
         }
 
-        // Add click-to-copy functionality
+        // Click-to-copy functionality
         document.addEventListener('DOMContentLoaded', function() {
             const outputs = document.querySelectorAll('.output');
             outputs.forEach(output => {
