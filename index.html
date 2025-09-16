@@ -568,7 +568,7 @@
             'Strategic', 'Premier', 'Progressive', 'Delta', 'Digital', 'Future', 'Smart', 'Quantum', 'Alpha', 'Beta', 'Omega',
             'Nexus', 'Catalyst', 'Pinnacle', 'Zenith', 'Vertex', 'Matrix', 'Phoenix', 'Titan', 'Atlas', 'Vector',
             'Capybara', 'Griffin', 'Squirrel', 'Mosaic', 'Nexus', 'Pulsewave', 'Zip', 'Flare', 'Echo',
-            'Synergy', 'Fusion', 'Velocity', 'Momentum', 'Paradigm', 'Infinity', 'Unity'
+            'Synergy', 'Fusion', 'Velocity', 'Momentum', 'Paradigm', 'Infinity', 'Unity', 'Zen'
         ];
 
         const appPrefixes = [
@@ -706,15 +706,60 @@
         }
 
         function generateOrganization() {
-            const name = randomChoice(organizationNames);
+            const name1 = randomChoice(organizationNames);
             const type = randomChoice(organizationTypes);
+            
             const formats = [
-                `${name} ${type}`,
-                `${name} ${randomChoice(organizationNames)} ${type}`,
-                `${randomChoice(organizationNames)} ${name} ${type}`
+                `${name1} ${type}`,
+                () => {
+                    // Ensure second name is different from first
+                    let name2;
+                    do {
+                        name2 = randomChoice(organizationNames);
+                    } while (name2 === name1);
+                    return `${name1} ${name2} ${type}`;
+                },
+                () => {
+                    // Ensure second name is different from first
+                    let name2;
+                    do {
+                        name2 = randomChoice(organizationNames);
+                    } while (name2 === name1);
+                    return `${name2} ${name1} ${type}`;
+                }
             ];
-            const result = randomChoice(formats);
+            
+            const selectedFormat = randomChoice(formats);
+            const result = typeof selectedFormat === 'function' ? selectedFormat() : selectedFormat;
             updateOutput('org-output', result);
+        }
+        
+        // Also update the bulk generator
+        // In your generateBulk function, replace the organizations section with:
+        organizations: () => {
+            const name1 = randomChoice(organizationNames);
+            const type = randomChoice(organizationTypes);
+            
+            const formats = [
+                `${name1} ${type}`,
+                () => {
+                    let name2;
+                    do {
+                        name2 = randomChoice(organizationNames);
+                    } while (name2 === name1);
+                    return `${name1} ${name2} ${type}`;
+                },
+                () => {
+                    let name2;
+                    do {
+                        name2 = randomChoice(organizationNames);
+                    } while (name2 === name1);
+                    return `${name2} ${name1} ${type}`;
+                }
+            ];
+            
+            const selectedFormat = randomChoice(formats);
+            return typeof selectedFormat === 'function' ? selectedFormat() : selectedFormat;
         }
 
         function generateApp() {
