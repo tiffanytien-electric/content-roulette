@@ -435,17 +435,21 @@
         ];
 
         const streets = [
-            'Main St', 'Oak Ave', 'Park Pl', 'Memory Ln', 'Washington Blvd', 'First Ave', 'Second St', 'Maple Dr',
-            'Cedar Ln', 'Pine St', 'Lincoln Ave', 'Madison St', 'Jackson Rd', 'Franklin St', 'Church St', 'Cove Ct.',
-            'Vista Way', 'Meadow St', 'Sand Ave', 'Ridge Rd', 'Neon Circuit Blvd', 'Quantum Ave',
-            'Binary Blvd', 'Chrome St', 'Hyperdrive Way', 'Frequency Ln', 'Boardwalk Dr', 'Dragon Boat Way',
-            'Rainbow Rd', 'Plasma Ave', 'Digital Loop', 'Echo Lake', 'Melody Loop', 'Zen Circle',
-            'Mill Rd', 'Marsh Ave', 'Highlander St', 'Stargate Way', 'Bell St.', 'Golden Rd', 'Wisteria Ln',
-            'Mockingbird Ln', 'Clock Way', 'Union St', 'Fleet St', 'Paper St', 'Cherry Tree Ln',
+            'Main', 'Oak', 'Park', 'Memory', 'Washington Blvd', 'First', 'Second', 'Maple',
+            'Cedar Ln', 'Pine', 'Lincoln ', 'Madison', 'Jackson Rd', 'Franklin', 'Church', 'Cove',
+            'Vista Way', 'Meadow', 'Sand', 'Ridge Rd', 'Neon Circuit Blvd', 'Quantum',
+            'Binary Blvd', 'Chrome', 'Hyperdrive Way', 'Frequency Ln', 'Boardwalk', 'Dragon Boat',
+            'Rainbow Rd', 'Plasma', 'Digital Loop', 'Echo Lake', 'Melody Loop', 'Zen Circle',
+            'Mill Rd', 'Marsh', 'Highlander', 'Stargate Way', 'Bell.', 'Golden', 'Wisteria',
+            'Mockingbird', 'Union', 'Fleet', 'Paper', 'Cherry Tree'
+        ];
+
+        const streetSuffix = [
+            'St', 'Ave', 'Dr', 'Ln', 'Rd', 'Blvd', 'Ct', 'Pl', 'Way', 'Cir'
         ];
 
         const cities = [
-            'Springfield', 'Franklin', 'Georgetown', 'Arlington', 'Fairview', 'Brookfield', 'Richmond', 'Aurora Bay',
+            'Springfield', 'Georgetown', 'Arlington', 'Fairview', 'Brookfield', 'Richmond', 'Aurora Bay',
             'Oakland', 'Ashland', 'Burlington', 'Manchester', 'Oxford', 'Clayton', 'Hudson', 'Kingston', 'Funky Town',
             'Baybrook', 'Forestdale', 'Cyclone Valley', 'Cosmos City', 'Kaleidoscope Falls', 'Jade Harbor',
             'Echo Valley', 'Thunderbluff', 'Orgrimmar', 'Mos Eisley', 'Gotham City', 'Metropolis', 'Silent Hill',
@@ -611,10 +615,11 @@
             const [min, max] = randomChoice(ranges);
             const number = randomNumber(min, max);
             const street = randomChoice(streets);
+            const streetSuffix = randomChoice(streetSuffix);
             const city = randomChoice(cities);
             const state = randomChoice(states);
             const zip = randomDigits(5);
-            const result = `${number} ${street}, ${city}, ${state} ${zip}`;
+            const result = `${number} ${street} ${streetSuffix}, ${city}, ${state} ${zip}`;
             updateOutput('address-output', result);
         }
 
