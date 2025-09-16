@@ -435,8 +435,8 @@
         ];
 
         const streets = [
-            'Main', 'Oak', 'Park', 'Memory', 'Washington Blvd', 'First', 'Second', 'Maple',
-            'Cedar Ln', 'Pine', 'Lincoln ', 'Madison', 'Jackson Rd', 'Franklin', 'Church', 'Cove',
+            'Main', 'Oak', 'Park', 'Memory', 'Washington', 'First', 'Second', 'Maple',
+            'Cedar Ln', 'Pine', 'Lincoln ', 'Madison', 'Jackson', 'Franklin', 'Church', 'Cove',
             'Vista Way', 'Meadow', 'Sand', 'Ridge Rd', 'Neon Circuit Blvd', 'Quantum',
             'Binary Blvd', 'Chrome', 'Hyperdrive Way', 'Frequency Ln', 'Boardwalk', 'Dragon Boat',
             'Rainbow Rd', 'Plasma', 'Digital Loop', 'Echo Lake', 'Melody Loop', 'Zen Circle',
@@ -444,7 +444,7 @@
             'Mockingbird', 'Union', 'Fleet', 'Paper', 'Cherry Tree'
         ];
 
-        const streetSuffix = [
+        const streetSuffixes = [
             'St', 'Ave', 'Dr', 'Ln', 'Rd', 'Blvd', 'Ct', 'Pl', 'Way', 'Cir'
         ];
 
@@ -615,11 +615,11 @@
             const [min, max] = randomChoice(ranges);
             const number = randomNumber(min, max);
             const street = randomChoice(streets);
-            const streetSuffix = randomChoice(streetSuffixis);
+            const streetSuffix = randomChoice(streetSuffixes);
             const city = randomChoice(cities);
             const state = randomChoice(states);
             const zip = randomDigits(5);
-            const result = `${number} ${street} ${streetSuffixis}, ${city}, ${state} ${zip}`;
+            const result = `${number} ${street} ${streetSuffixes}, ${city}, ${state} ${zip}`;
             updateOutput('address-output', result);
         }
 
