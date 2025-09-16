@@ -436,12 +436,15 @@
 
         const streets = [
             'Main', 'Oak', 'Park', 'Memory', 'Washington', 'First', 'Second', 'Maple',
-            'Cedar', 'Pine', 'Lincoln ', 'Madison', 'Jackson', 'Franklin', 'Church', 'Cove',
-            'Vista Way', 'Meadow', 'Sand', 'Ridge Rd', 'Neon Circuit', 'Quantum',
+            'Cedar', 'Pine', 'Lincoln', 'Madison', 'Jackson', 'Franklin', 'Church', 'Cove',
+            'Vista', 'Meadow', 'Sand', 'Ridge', 'Neon Circuit', 'Quantum',
             'Binary', 'Chrome', 'Hyperdrive', 'Frequency', 'Boardwalk', 'Dragon Boat',
-            'Rainbow', 'Plasma', 'Digital', 'Echo Lake', 'Melody', 'Zen Circle',
+            'Rainbow', 'Plasma', 'Digital Loop', 'Echo Lake', 'Melody', 'Zen',
             'Mill', 'Marsh', 'Highlander', 'Stargate', 'Bell', 'Golden', 'Wisteria',
-            'Mockingbird', 'Union', 'Fleet', 'Paper', 'Cherry Tree'
+            'Mockingbird', 'Union', 'Fleet', 'Paper', 'Cherry Tree', 'Horseshoe', 'Pineapple',
+            'Vinyard', 'Horseshoe', 'Festival', 'Broadway', 'Mayflower', 'Orchard',
+            'Lantern', 'Daisy', 'Sunflower', 'Rose', 'Onyx', 'Victory', 'Coast', 'Strata',
+            '',
         ];
 
         const streetSuffixes = [
@@ -455,7 +458,7 @@
             'Echo Valley', 'Thunderbluff', 'Orgrimmar', 'Mos Eisley', 'Gotham City', 'Metropolis', 'Silent Hill',
             'Vice City', 'Raccoon City', 'Hyrule', 'Derry', 'Sleepy Hollow', 'Liberty City', 'Hobbiton',
             'River City', 'Raven\'s Hollow', 'Darkwood', 'Brookfield', 'Awkwardville', 'Mountainview',
-            'Hawkins', 'Kakariko Village', 'Citadel'
+            'Hawkins', 'Kakariko Village', 'Citadel', 'Stepford'
         ];
 
         const states = [
@@ -556,31 +559,36 @@
 
         const organizationTypes = [
             'Corporation', 'Inc', 'LLC', 'Ltd', 'Group', 'Company', 'Enterprises', 'Solutions', 'Systems', 
-            'Technologies', 'Industries', 'Partners', 'Associates', 'Holdings', 'Ventures'
+            'Technologies', 'Industries', 'Partners', 'Associates', 'Holdings', 'Ventures', 'Corp', 'AI',
+            'Labs'
         ];
 
         const organizationNames = [
             'Apex', 'Global', 'Metro', 'Elite', 'Prime', 'Summit', 'Stellar', 'Ripple', 'Innovative', 'Advanced',
-            'Strategic', 'Premier', 'Progressive', 'Digital', 'Future', 'Smart', 'Quantum', 'Alpha', 'Beta', 'Omega',
+            'Strategic', 'Premier', 'Progressive', 'Delta', 'Digital', 'Future', 'Smart', 'Quantum', 'Alpha', 'Beta', 'Omega',
             'Nexus', 'Catalyst', 'Pinnacle', 'Zenith', 'Vertex', 'Matrix', 'Phoenix', 'Titan', 'Atlas', 'Vector',
-            'Prism', 'Griffin', 'Squirrel', 'Mosaic', 'Nexus', 'Pulsewave', 'Zip', 'Flare', 'Echo',
+            'Capybara', 'Griffin', 'Squirrel', 'Mosaic', 'Nexus', 'Pulsewave', 'Zip', 'Flare', 'Echo',
             'Synergy', 'Fusion', 'Velocity', 'Momentum', 'Paradigm', 'Infinity', 'Unity'
         ];
 
         const appPrefixes = [
             'Quick', 'Smart', 'Fast', 'Super', 'Ultra', 'Mega', 'Pro', 'Max', 'Plus', 'Go', 'My', 'The', 
-            'Omni', 'Aero', 'Eclectic', 'Nano', 'Magna',
+            'Omni', 'Aero', 'Eclectic', 'Nano', 'Magna', 'Adaptive', 'Subatomic',
             'Best', 'Top', 'Turbo', 'Power', 'Elite', 'Prime', 'Alpha', 'Beta', 'Zen', 'Neo', 'Meta'
         ];
 
         const appTypes = [
-            'Cipher', 'Vector', 'Helix', 'Dimension', 'Parallax', 'Kinetic', 'Axiom', 'Vortex', 
-            'Paradigm', 'Proton'
+            'Cipher', 'Vector', 'Helix', 'Dimension', 'Parallax', 'Kinetic', 'Axiom', 'Vortex', 'Axon',
+            'Paradigm', 'Proton', 'Phantom', 'Isotope', 'Sonic', 'Neon', 'Neutron', 'Portal', 'Molecule', 'Atom',
+            'Graphite', 'Charge', 'Carbon', 'Holographic', 'Synapse', 'Cortex', 'Comet', 'Radioactive', 'Interstellar',
+            'Prototype', 'Blockchain', 'Polygon', 'Recursive', 'PyTorch', 'Keros', 'Boolean',
         ];
 
         const appSuffixes = [
             'Hub', 'Zone', 'Pro', 'Max', 'Plus', 'Go', 'Now', 'Express', 'Lite', 'Premium', 'Studio', 'Lab',
-            'Craft', 'Sphere', 'Stack', 'Core', 'Path', 'Vault',
+            'Craft', 'Sphere', 'Stack', 'Core', 'Path', 'Vault', 'Encoder', 'Decoder', 'Compiler', 'Engine', 'Builder',
+            'Module', 'AI', 'ML', 'AI/ML', 'ML/AI', 'Converter', 'Parser', 'Synthesizer', 'Detector',
+            'Proxy', 'Theory', 'Optimizer', '',
             'Works', 'Tools', 'Suite', 'Box', 'Kit', 'Desk', 'Space', 'Cloud', 'Link', 'Connect', 'Sync', 'Flow'
         ];
 
@@ -703,7 +711,8 @@
             const formats = [
                 `${name} ${type}`,
                 `${name} ${randomChoice(organizationNames)} ${type}`,
-                `${randomChoice(organizationNames)} ${name} ${type}`
+                `${randomChoice(organizationNames)} ${name} ${type}`,
+                `${randomChoice(organizationNames)} ${name} ${name} ${type}`
             ];
             const result = randomChoice(formats);
             updateOutput('org-output', result);
@@ -762,7 +771,8 @@
                     const formats = [
                         `${name} ${type}`,
                         `${name} ${randomChoice(organizationNames)} ${type}`,
-                        `${randomChoice(organizationNames)} ${name} ${type}`
+                        `${randomChoice(organizationNames)} ${name} ${type}`,
+                        `${randomChoice(organizationNames)} ${name} ${name} ${type}`
                     ];
                     return randomChoice(formats);
                 },
