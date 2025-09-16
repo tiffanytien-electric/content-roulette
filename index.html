@@ -606,7 +606,11 @@
         }
 
         function generateAddress() {
-            const number = randomNumber(1, 9999);
+            // const number = randomNumber(1, 9999);
+            const digitCount = Math.floor(Math.random() * 5) + 1; // 1-5 digits
+            const min = digitCount === 1 ? 1 : Math.pow(10, digitCount - 1);
+            const max = Math.pow(10, digitCount) - 1;
+            const number = randomNumber(min, max);
             const street = randomChoice(streets);
             const city = randomChoice(cities);
             const state = randomChoice(states);
