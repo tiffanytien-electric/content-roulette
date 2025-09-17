@@ -444,7 +444,6 @@
             'Mockingbird', 'Union', 'Fleet', 'Paper', 'Cherry Tree', 'Horseshoe', 'Pineapple',
             'Vinyard', 'Horseshoe', 'Festival', 'Broadway', 'Mayflower', 'Orchard',
             'Lantern', 'Daisy', 'Sunflower', 'Rose', 'Onyx', 'Victory', 'Coast', 'Strata',
-            '',
         ];
 
         const streetSuffixes = [
@@ -555,7 +554,10 @@
         ];
 
         const personalEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com', 'aol.com'];
-        const workEmailDomains = ['company.com', 'techcorp.net', 'innovate.io', 'globaldynamics.biz', 'nexus.co', 'catalyst.org'];
+        
+        const workEmailDomains = ['abccompany.com', 'techcorp.net', 'innovate.io', 'globaldynamics.biz', 'nexus.co', 'brightideas.tech',
+              'catalyst.org', 'northstar.io', 'bluesky.labs', 'acme.corp'
+        ];
 
         const organizationNames = [
             'Apex', 'Global', 'Metro', 'Elite', 'Prime', 'Summit', 'Stellar', 'Ripple', 'Innovative', 'Advanced',
@@ -574,7 +576,7 @@
         const appPrefixes = [
             'Quick', 'Smart', 'Fast', 'Super', 'Ultra', 'Mega', 'Pro', 'Max', 'Plus', 'Go', 'My', 'The', 
             'Omni', 'Aero', 'Eclectic', 'Nano', 'Magna', 'Adaptive', 'Subatomic',
-            'Best', 'Top', 'Turbo', 'Power', 'Elite', 'Prime', 'Alpha', 'Beta', 'Zen', 'Neo', 'Meta'
+            'Turbo', 'Power', 'Elite', 'Prime', 'Alpha', 'Beta', 'Zen', 'Neo', 'Meta'
         ];
 
         const appTypes = [
@@ -588,7 +590,7 @@
             'Hub', 'Zone', 'Pro', 'Max', 'Plus', 'Go', 'Now', 'Express', 'Lite', 'Premium', 'Studio', 'Lab',
             'Craft', 'Sphere', 'Stack', 'Core', 'Path', 'Vault', 'Encoder', 'Decoder', 'Compiler', 'Engine', 'Builder',
             'Module', 'AI', 'ML', 'AI/ML', 'ML/AI', 'Converter', 'Parser', 'Synthesizer', 'Detector',
-            'Proxy', 'Theory', 'Optimizer', '',
+            'Proxy', 'Theory', 'Optimizer', 'One', 
             'Works', 'Tools', 'Suite', 'Box', 'Kit', 'Desk', 'Space', 'Cloud', 'Link', 'Connect', 'Sync', 'Flow'
         ];
 
@@ -656,13 +658,41 @@
         }
 
         function generateMacDevice() {
-            const device = randomChoice(macDevices);
+            const device = randomChoice(['MacBook', 'Mac', 'iMac', 'Apple Macbook', 'MB']);
             const model = randomChoice(['Air', 'Pro']);
-            const cpu = randomChoice(['M3', 'M4', 'M4 Pro', 'M4 Max']);
+            const size = randomChoice(['13"', '14"', '15"', '16"', '13-inch', '14-inch', '15-inch', '16-inch']);
+            const cpu = randomChoice(['M3', 'M4', 'M4 Pro', 'M4 Max', 'M3 Ultra', 'M4 Ultra']);
             const year = randomChoice(['2024', '2025', '2026']);
             const storage = randomChoice(['256GB', '512GB', '1TB', '2TB']);
-            const ram = randomChoice(['16GB', '32GB', '64GB']);
-            const result = `${device} ${model} ${cpu} (${year} ${ram} RAM ${storage} SSD)`;
+            const ram = randomChoice(['8GB', '16GB', '24GB', '32GB', '64GB', '128GB']);
+            
+            // Randomly choose one of the 5 formats
+            const formatChoice = Math.floor(Math.random() * 5);
+            let result = '';
+            
+            switch (formatChoice) {
+                case 0:
+                    // device model size
+                    result = `${device} ${model} ${size}`;
+                    break;
+                case 1:
+                    // device model size cpu
+                    result = `${device} ${model} ${size} ${cpu}`;
+                    break;
+                case 2:
+                    // device model size cpu year
+                    result = `${device} ${model} ${size} ${cpu} (${year})`;
+                    break;
+                case 3:
+                    // device model size cpu year ram storage - format 1
+                    result = `${device} ${model} ${size} ${cpu} (${year} ${ram} RAM ${storage} SSD)`;
+                    break;
+                case 4:
+                    // device model size cpu year ram storage - format 2
+                    result = `${device} ${model} ${size} ${cpu} ${year} ${ram} ${storage}`;
+                    break;
+            }
+            
             updateOutput('mac-output', result);
         }
 
@@ -678,13 +708,14 @@
         }
 
         function generateSerial() {
-            const formats = [
-                () => randomAlphanumeric(2) + randomDigits(8) + randomAlphanumeric(2),
-                () => randomAlphanumeric(4) + randomDigits(6) + randomAlphanumeric(2),
-                () => randomDigits(4) + randomAlphanumeric(4) + randomDigits(4),
-                () => randomAlphanumeric(3) + randomDigits(3) + randomAlphanumeric(3) + randomDigits(3)
-            ];
-            const result = randomChoice(formats)();
+            const length = Math.floor(Math.random() * 9) + 8; // 8 to 16 characters
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let result = '';
+            
+            for (let i = 0; i < length; i++) {
+                result += chars[Math.floor(Math.random() * chars.length)];
+            }
+            
             updateOutput('serial-output', result);
         }
 
