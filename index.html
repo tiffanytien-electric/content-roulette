@@ -665,38 +665,39 @@
             const year = randomChoice(['2024', '2025', '2026']);
             const storage = randomChoice(['256GB', '512GB', '1TB', '2TB']);
             const ram = randomChoice(['8GB', '16GB', '24GB', '32GB', '64GB', '128GB']);
+            const color = randomChoice(['Space Gray', 'Silver', 'Gold', 'Space Black', 'Midnight', 'Starlight']);
             
-            // Randomly choose one of the 5 formats
-            const formatChoice = Math.floor(Math.random() * 5);
+            // Randomly choose one of the 6 formats (fixed the random range)
+            const formatChoice = Math.floor(Math.random() * 6);
             let result = '';
             
             switch (formatChoice) {
                 case 0:
-                // device model size
-                randomValue = `${device} ${model} ${size}`;
-                break;
+                    // device model size
+                    result = `${device} ${model} ${size}`;
+                    break;
                 case 1:
                     // device model size cpu
-                    randomValue = `${device} ${model} ${size} - ${cpu}`;
+                    result = `${device} ${model} ${size} - ${cpu}`;
                     break;
-                  case 2:
-                // device model size cpu year
-                randomValue = `${device} ${model} ${size} - ${cpu} - (${year})`;
-                break;
-              case 3:
-                // device model size cpu year ram storage - format 1 (parentheses)
-                randomValue = `${device} ${model} ${size} ${cpu} (${year} - ${ram} RAM - ${storage} SSD)`;
-                break;
-              case 4:
-                // device model size cpu year ram storage - format 2 (space-separated)
-                randomValue = `${device} ${model} ${size} - ${cpu} - ${year} - ${ram} RAM - ${storage} SSD`;
-                break;
-              case 5:
-                // device model size cpu year ram storage - format 2 (space-separated)
-                randomValue = `${device} ${model} ${size} - ${cpu} - ${year} - ${ram} RAM - ${storage} SSD- ${color}`;
-                break;
-              default:
-            randomValue = `${device} ${model} ${size}`;
+                case 2:
+                    // device model size cpu year
+                    result = `${device} ${model} ${size} - ${cpu} - (${year})`;
+                    break;
+                case 3:
+                    // device model size cpu year ram storage - format 1 (parentheses)
+                    result = `${device} ${model} ${size} ${cpu} (${year} - ${ram} RAM - ${storage} SSD)`;
+                    break;
+                case 4:
+                    // device model size cpu year ram storage - format 2 (space-separated)
+                    result = `${device} ${model} ${size} - ${cpu} - ${year} - ${ram} RAM - ${storage} SSD`;
+                    break;
+                case 5:
+                    // device model size cpu year ram storage color - format 3 (with color)
+                    result = `${device} ${model} ${size} - ${cpu} - ${year} - ${ram} RAM - ${storage} SSD - ${color}`;
+                    break;
+                default:
+                    result = `${device} ${model} ${size}`;
             }
             
             updateOutput('mac-output', result);
