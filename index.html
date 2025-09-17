@@ -658,7 +658,7 @@
         }
 
         function generateMacDevice() {
-            const device = randomChoice(['MacBook', 'Mac', 'iMac', 'Apple Macbook', 'MB']);
+            const device = randomChoice(['MacBook', 'Apple MB', 'Apple Macbook', 'MB']);
             const model = randomChoice(['Air', 'Pro']);
             const size = randomChoice(['13"', '14"', '15"', '16"', '13-inch', '14-inch', '15-inch', '16-inch']);
             const cpu = randomChoice(['M3', 'M4', 'M4 Pro', 'M4 Max', 'M3 Ultra', 'M4 Ultra']);
@@ -672,25 +672,31 @@
             
             switch (formatChoice) {
                 case 0:
-                    // device model size
-                    result = `${device} ${model} ${size}`;
-                    break;
+                // device model size
+                randomValue = `${device} ${model} ${size}`;
+                break;
                 case 1:
                     // device model size cpu
-                    result = `${device} ${model} ${size} ${cpu}`;
+                    randomValue = `${device} ${model} ${size} - ${cpu}`;
                     break;
-                case 2:
-                    // device model size cpu year
-                    result = `${device} ${model} ${size} ${cpu} (${year})`;
-                    break;
-                case 3:
-                    // device model size cpu year ram storage - format 1
-                    result = `${device} ${model} ${size} ${cpu} (${year} ${ram} RAM ${storage} SSD)`;
-                    break;
-                case 4:
-                    // device model size cpu year ram storage - format 2
-                    result = `${device} ${model} ${size} ${cpu} ${year} ${ram} ${storage}`;
-                    break;
+                  case 2:
+                // device model size cpu year
+                randomValue = `${device} ${model} ${size} - ${cpu} - (${year})`;
+                break;
+              case 3:
+                // device model size cpu year ram storage - format 1 (parentheses)
+                randomValue = `${device} ${model} ${size} ${cpu} (${year} - ${ram} RAM - ${storage} SSD)`;
+                break;
+              case 4:
+                // device model size cpu year ram storage - format 2 (space-separated)
+                randomValue = `${device} ${model} ${size} - ${cpu} - ${year} - ${ram} RAM - ${storage} SSD`;
+                break;
+              case 5:
+                // device model size cpu year ram storage - format 2 (space-separated)
+                randomValue = `${device} ${model} ${size} - ${cpu} - ${year} - ${ram} RAM - ${storage} SSD- ${color}`;
+                break;
+              default:
+            randomValue = `${device} ${model} ${size}`;
             }
             
             updateOutput('mac-output', result);
