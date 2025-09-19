@@ -797,33 +797,6 @@
             const result = typeof selectedFormat === 'function' ? selectedFormat() : selectedFormat;
             updateOutput('org-output', result);
         }
-        
-        // Bulk generator
-        organizations: () => {
-            const name1 = randomChoice(organizationNames);
-            const type = randomChoice(organizationTypes);
-            
-            const formats = [
-                `${name1} ${type}`,
-                () => {
-                    let name2;
-                    do {
-                        name2 = randomChoice(organizationNames);
-                    } while (name2 === name1);
-                    return `${name1} ${name2} ${type}`;
-                },
-                () => {
-                    let name2;
-                    do {
-                        name2 = randomChoice(organizationNames);
-                    } while (name2 === name1);
-                    return `${name2} ${name1} ${type}`;
-                }
-            ];
-            
-            const selectedFormat = randomChoice(formats);
-            return typeof selectedFormat === 'function' ? selectedFormat() : selectedFormat;
-        }
 
         function generateApp() {
             const formats = [
@@ -836,18 +809,6 @@
             const result = randomChoice(formats)();
             updateOutput('app-output', result);
         }
-
-//
-apps: () => {
-    const formats = [
-        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`,
-        () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
-        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`, // Added spaces
-        () => `${randomChoice(appTypes)} ${randomChoice(appSuffixes)}`,
-        () => `${randomChoice(appPrefixes)} ${randomChoice(appTypes)}`
-    ];
-    return randomChoice(formats)();
-}
 
         function updateOutput(elementId, content) {
             const element = document.getElementById(elementId);
