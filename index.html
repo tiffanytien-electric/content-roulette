@@ -180,15 +180,39 @@
             </div>
             <div class="bulk-controls">
                 <select class="bulk-select" id="bulk-type">
-                    <option value="names">Names</option>
+                    <optgroup>
+                        <option value="People & Contact" disabled>People &amp; Contact</option>
+                        <option value="names">Names</option>
+                        <option value="jobs">Job Titles</option>
+                        <option value="emails">Email Addresses</option>
+                        <option value="phones">Phone Numbers</option>
+                        <option value="addresses">Addresses</option>
+                    </optgroup>
+                    <optgroup>
+                        <option value="Devices & Assets" disabled>Devices & Assets</option>
+                        <option value="mac">Mac Devices</option>
+                        <option value="windows">Windows devices</option>
+                        <option value="assets">Asset Names</option>
+                    </optgroup>
+                    <optgroup>
+                        <option value="Other" disabled>Other</option>
+                        <option value="organizations">Organization Names</option>
+                        <option value="apps">App Names</option>
+                        <option value="ups">UPS Tracking Numbers</option>
+                        <option value="serials">Serial Numbers</option>
+                    </optgroup>
+                    <!-- <option value="names">Names</option>
                     <option value="jobs">Job Titles</option>
                     <option value="emails">Email Addresses</option>
                     <option value="phones">Phone Numbers</option>
                     <option value="addresses">Addresses</option>
-                    <option value="ups">UPS Tracking Numbers</option>
-                    <option value="serials">Serial Numbers</option>
+                    <option value="macDevices">Mac Devices</option>
+                    <option value="windowsDevices">Windows devices</option>
+                    <option value="assets">Asset Names</option>
                     <option value="organizations">Organization Names</option>
                     <option value="apps">App Names</option>
+                    <option value="ups">UPS Tracking Numbers</option>
+                    <option value="serials">Serial Numbers</option> -->
                 </select>
                 <input type="number" class="bulk-count" id="bulk-count" value="10" min="1" max="100" placeholder="Count">
                 <button class="generate-btn" style="width: auto; margin: 0;" onclick="generateBulk()">Generate Bulk</button>
@@ -281,16 +305,6 @@
 
             <div class="generator-card">
                 <div class="card-title">
-                    <span class="card-icon">🖨️</span>
-                    Asset Name
-                </div>
-                <button class="generate-btn" onclick="generateAsset()">Generate Asset</button>
-                <div id="asset-output" class="output">Click to generate</div>
-                <div id="asset-copy" class="copy-notice">Click output to copy</div>
-            </div>
-
-            <div class="generator-card">
-                <div class="card-title">
                     <span class="card-icon">💻</span>
                     Mac Device
                 </div>
@@ -309,25 +323,15 @@
                 <div id="windows-copy" class="copy-notice">Click output to copy</div>
             </div>
 
-<!--             <div class="generator-card">
+            <div class="generator-card">
                 <div class="card-title">
-                    <span class="card-icon">💼</span>
-                    Job Title
+                    <span class="card-icon">🖨️</span>
+                    Asset Name
                 </div>
-                <button class="generate-btn" onclick="generateJobTitle()">Generate Title</button>
-                <div id="job-output" class="output">Click to generate</div>
-                <div id="job-copy" class="copy-notice">Click output to copy</div>
+                <button class="generate-btn" onclick="generateAsset()">Generate Asset</button>
+                <div id="asset-output" class="output">Click to generate</div>
+                <div id="asset-copy" class="copy-notice">Click output to copy</div>
             </div>
-
-             <div class="generator-card">
-                <div class="card-title">
-                    <span class="card-icon">🏢</span>
-                    Organization Name
-                </div>
-                <button class="generate-btn" onclick="generateOrganization()">Generate Organization</button>
-                <div id="org-output" class="output">Click to generate</div>
-                <div id="org-copy" class="copy-notice">Click output to copy</div>
-            </div> -->
 
             <div class="generator-card">
                 <div class="card-title">
@@ -496,7 +500,7 @@
         ];
 
         const macDevices = [
-            'Macbook', 'MB', 'Apple Macbook'
+            'Macbook', 'Apple Macbook'
         ];
 
         const windowsDevices = [
@@ -684,7 +688,7 @@
         }
 
         function generateMacDevice() {
-            const device = randomChoice(['MacBook', 'Apple MB', 'Apple Macbook', 'MB']);
+            const device = randomChoice(['MacBook', 'Apple MB', 'Apple Macbook']);
             const model = randomChoice(['Air', 'Pro']);
             const size = randomChoice(['13"', '14"', '15"', '16"', '13-inch', '14-inch', '15-inch', '16-inch']);
             const cpu = randomChoice(['M3', 'M4', 'M4 Pro', 'M4 Max', 'M3 Ultra', 'M4 Ultra']);
@@ -843,7 +847,70 @@
                     return `${first}.${last}@${domain}`;
                 },
                 jobs: () => randomChoice(jobTitles),
-                serials: () => randomAlphanumeric(2) + randomDigits(8) + randomAlphanumeric(2),
+                // serials: () => randomAlphanumeric(2) + randomDigits(8) + randomAlphanumeric(2),
+                serials: () => {
+                    const patterns = [
+                        // Pattern: XX-NNNNNN-XX (manufacturer code + digits + batch code)
+                        () => `${randomAlphanumeric(2)}-${randomDigits(6)}-${randomAlphanumeric(2)}`,
+                        // Pattern: XXNNNNNNN (letters + numbers, like Apple style)
+                        () => `${randomAlphanumeric(2)}${randomDigits(7)}`,
+                        // Pattern: NNNXXXNNN (numbers + letters + numbers)
+                        () => `${randomDigits(3)}${randomAlphanumeric(3)}${randomDigits(3)}`,
+                        // Pattern: XXXX-NNNN-XXXX (balanced blocks)
+                        () => `${randomAlphanumeric(4)}-${randomDigits(4)}-${randomAlphanumeric(4)}`,
+                        // Pattern: Longer format XXNNNNNNNXX
+                        () => `${randomAlphanumeric(2)}${randomDigits(8)}${randomAlphanumeric(2)}`,
+                        // Pattern: Short format XXNNNNNN
+                        () => `${randomAlphanumeric(2)}${randomDigits(6)}`
+                    ];
+                    return randomChoice(patterns)();
+                },
+                mac: () => {
+                    const device = randomChoice(macDevices);
+                    const model = randomChoice(['Air', 'Pro']);
+                    const size = randomChoice(['13"', '14"', '15"', '16"', '13-inch', '14-inch', '15-inch', '16-inch']);
+                    const cpu = randomChoice(['M3', 'M4', 'M4 Pro', 'M4 Max', 'M3 Ultra', 'M4 Ultra']);
+                    const year = randomChoice(['2024', '2025', '2026']);
+                    const storage = randomChoice(['256GB', '512GB', '1TB', '2TB']);
+                    const ram = randomChoice(['8GB', '16GB', '24GB', '32GB', '64GB', '128GB']);
+                    const color = randomChoice(['Space Gray', 'Silver', 'Gold', 'Space Black', 'Midnight', 'Starlight']);
+                    
+                    // Randomly choose one of the 6 formats
+                    const formatChoice = Math.floor(Math.random() * 6);
+                    let result = '';
+                    
+                    switch (formatChoice) {
+                        case 0:
+                            // device model size
+                            result = `${device} ${model} ${size}`;
+                            break;
+                        case 1:
+                            // device model size cpu
+                            result = `${device} ${model} ${size} - ${cpu}`;
+                            break;
+                        case 2:
+                            // device model size cpu year
+                            result = `${device} ${model} ${size} - ${cpu} - (${year})`;
+                            break;
+                        case 3:
+                            // device model size cpu year ram storage - format 1 (parentheses)
+                            result = `${device} ${model} ${size} ${cpu} (${year} - ${ram} RAM - ${storage} SSD)`;
+                            break;
+                        case 4:
+                            // device model size cpu year ram storage - format 2 (space-separated)
+                            result = `${device} ${model} ${size} - ${cpu} - ${year} - ${ram} RAM - ${storage} SSD`;
+                            break;
+                        case 5:
+                            // device model size cpu year ram storage color - format 3 (with color)
+                            result = `${device} ${model} ${size} - ${cpu} - ${year} - ${ram} RAM - ${storage} SSD - ${color}`;
+                            break;
+                        default:
+                            result = `${device} ${model} ${size}`;
+                    }
+                    return result;
+                },
+                windows: () => randomChoice(windowsDevices),
+                assets: () => randomChoice(assets),
                 organizations: () => {
                     const name = randomChoice(organizationNames);
                     const type = randomChoice(organizationTypes);
