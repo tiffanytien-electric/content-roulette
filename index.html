@@ -441,7 +441,6 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             initTheme();
-            // your existing click-to-copy code...
         });
 
         // Data arrays
@@ -484,14 +483,15 @@
         
             // Other First Names
             'Abigail', 'Abraham', 'Amara', 'Anna', 'Aria', 'Atlas', 'Aurora', 'Avery', 'Calvin', 
-            'Celeste', 'Charlotte', 'Chris', 'Cora', 'David', 'Dante', 'Darby', 'Darius', 'Delphine', 'Denise',
-            'Desmond', 'Damon', 
-            'Dorian', 'Eleanor', 'Ember', 'Emery', 'Erezabet', 'Ezra', 'Felix', 'François', 'Geralt', 'Gianna', 'Harper', 'Hayden',
-            'Hazel', 'Ignacio', 'Thérèse', 'Teresa', 'Joshua', 'Rebecca', 'Arden',
+            'Celeste', 'Charlotte', 'Chris', 'Cora', 'Cybil', 'David', 'Dante', 'Darby', 'Darius', 'Delphine', 'Denise',
+            'Desmond', 'Damon', 'Daemon', 'Delilah', 'Delaney', 'Diana',
+            'Dorian', 'Eleanor', 'Ember', 'Emery', 'Erezabet', 'Ezra', 'Felix', 'François', 'Frederick', 'Geralt', 'Gianna', 'Gia',
+            'Harper', 'Hayden', 'Hazel', 'Ignacio', 'Thérèse', 'Teresa', 'Joshua', 'Rebecca', 'Arden',
             'Imani', 'Indigo', 'Iris', 'Isaiah', 'Ivy', 'Jamal', 'James', 'Jamison', 'Jasmine', 'Jasper', 
             'Jerome', 'Jillian', 'Juniper', 'Kaia', 'Keisha', 'Kofi', 'Leo', 'Luna', 'Lyra', 
             'Malcolm', 'Mason', 'Maxwell', 'Mira', 'Nia', 'Nova', 'Natalie', 'Orion', 'Parker', 'Paisley', 'Maven',
-            'Philip', 'Philippa', 'Phoenix', 'Riley', 'Rowan', 'Rumi', 'Sage', 'Sebastian', 'Serena', 'Shayla', 'Stella', 
+            'Philip', 'Philippa', 'Phoenix', 'Riley', 'Rowan', 'Rumi', 'Sage', 'Sebastian', 'Serena', 'Shayla',
+            'Shannon', 'Stella', 
             'Tarkus', 'Tasha', 'Terrell', 'Timothy', 'Vera', 'Wren', 'Zara', 'Zephyr', 'Zion', 'Zoey',
         
             // Pet First Names
@@ -561,6 +561,73 @@
 
         ];
 
+             const jobTitles = [
+            // Finance
+            'Senior Financial Analyst', 'Tax Specialist Level II',
+            'Investment Banking Associate', 'Director of Risk Management', 'VP of Corporate Finance',
+            
+            // Engineering
+            'Software Engineer', 'Senior Backend Developer', 'DevOps Engineer Level III', 'Principal Software Architect',
+            'Data Engineer', 'Principal Full Stack Developer', 'Machine Learning Engineer II', 'Engineering Manager',
+            'Full Stack Developer', 'Front End Developer', 'Back End Developer', 'QA Engineer', 'Test Automation Engineer',
+            
+            // Design
+            'Senior Product Designer', 'Creative Director', 'UI/UX Designer Level II',
+            'Brand Designer', 'Senior Visual Designer', 'Design System Lead',
+            
+            // Marketing
+            'Marketing Coordinator', 'Digital Marketing Manager', 'Content Marketing Specialist II',
+            'Brand Marketing Director', 'Senior Growth Marketing Manager', 'Performance Marketing Lead', 'VP of Marketing',
+            
+            // Sales
+            'Sales Representative', 'Account Executive', 'Sales Director', 'Business Development Manager II',
+            'Enterprise Sales Manager', 'Customer Success Manager', 'Regional Sales Director',
+            
+            // HR
+            'HR Coordinator', 'Senior People Operations Manager', 'Talent Acquisition Specialist II',
+            'Employee Relations Manager', 'Senior Analyst', 'Organizational Development Director', 'VP of People & Culture',
+            
+            // IT
+            'IT Specialist', 'Systems Administrator', 'Network Engineer Level III',
+            'Cybersecurity Manager', 'Cloud Architect', 'IT Operations Director', 'Chief Information Security Officer',
+            'Site Reliability Engineer',
+            
+            // Product
+            'Product Manager', 'Senior Product Manager', 'Associate Product Manager II', 'Director of Product Management',
+            'Technical Product Manager', 'Product Marketing Manager', 'Director of Product Strategy', 'VP of Product',
+            
+            // Operations
+            'Operations Coordinator', 'Lead Operations Manager', 'Supply Chain Analyst',
+            'Process Improvement Manager', 'Senior Project Manager', 'Operations Excellence Director', 'VP of Operations',
+            
+            // Data & Analytics
+            'Data Analyst', 'Lead Data Scientist', 'Business Intelligence Analyst',
+            'Analytics Manager', 'Director of Data Engineering', 'VP of Data & Analytics',
+            
+            // Customer Success
+            'Customer Success Representative', 'Senior Customer Success Manager', 'Customer Success Specialist II',
+            'Customer Experience Manager', 'Senior Account Manager', 'Director of Customer Success',
+            
+            // Legal & Compliance
+            'Legal Assistant', 'Senior Corporate Counsel', 'General Counsel', 'Compliance Officer Level II',
+            'Senior Legal Operations Manager', 'Chief Compliance Officer',
+
+            //Other Job Titles
+            'Artist', 'Event Coordinator', 'Copywriter', 'Executive Assistant', 'Food Taster',
+            
+            // Silly Job Titles
+            'Chief Happiness Officer', 'Meme Analyst', 'Director of Cat Herding', 'Nap Coordinator', 'VP of Snacks', 'VP of Naps',
+            'VP of Snack Operations', 'Coffee Quality Assurance Manager', 'Senior Emoji Specialist', 'Chief Procrastination Officer',
+            'Lead Rubber Duck Debugger', 'Director of Office Plants', 'Lead Overthinking Consultant', 'Principal Chaos Engineer',
+            'VP of Meetings', 'Chief Fun Police', 'Director of Existential Crisis Management',
+            'Chief Wizard', 'Senior Deadline Whisperer', 'Sock Puppet Strategist', 'Top Hat Magician',
+            'VP of Overthinking', 'Lead Conspiracy Theory Debunker', 'Professional Meeting Attender', 'Fashion Police Officer',
+            'Pro Wrestler', 'Chief Nap Advisor', 'Puppy Concierge', 'Senior Pen Cap Chewer', 
+            'Director of Explaining Things Twice', 'Principal Cat Video Quality Controller', 'VP of Making Things Look Busy', 'Senior Parking Spot Negotiator',
+            'Chief Microwave Timer Expert','VP of Untangling Headphones', 'Lead YOLO Operative',
+            'Professional Sock Sorter', 'Sandwich Whisperer', 'Unicorn Rider', 'Narwhal Detective'
+        ];
+
         const streets = [
                 'Main', 'Oak', 'Park', 'Memory', 'Washington', 'First', 'Second', 'Maple',
                 'Cedar', 'Pine', 'Lincoln', 'Madison', 'Jackson', 'Franklin', 'Church', 'Cove',
@@ -614,94 +681,48 @@
             'Bose QC45 Bluetooth Speaker', 'Netgear Nighthawk AX12 Router'
         ];
 
-        const macDevices = [
-            'Macbook', 'Apple Macbook'
+        const pcBrands = [
+            'Dell', 'HP', 'Lenovo', 'ASUS', 'Acer', 'Microsoft', 'Razer', 'MSI', 'Toshiba', 'Samsung', 'LG', 'Alienware'
         ];
 
-        const windowsDevices = [
-            'Dell XPS 13-inch', 'HP Spectre x360', 'Lenovo ThinkPad X1 Carbon', 'ASUS ZenBook 14', 'Surface Laptop 5',
-            'HP Pavilion 15"', 'Lenovo ThinkPad T14', 'ASUS VivoBook Pro 15', 'Surface Laptop Studio 2', 'Alienware m15 R7',
-            'Dell XPS 13 Plus (13.4" Intel i7-1360P 16GB RAM 512GB SSD)', 'HP Spectre x360 14 (14" Intel i7-1355U 16GB RAM 1TB SSD)',
-            'Lenovo ThinkPad X1 Carbon Gen 11 (14" Intel i7-1365U 32GB RAM 1TB SSD)', 'ASUS ZenBook Pro 14 OLED (14.5" Intel i9-13900H 32GB RAM 1TB SSD)',
-            'Microsoft Surface Laptop Studio 2 (14.4" Intel i7-13700H 32GB RAM 1TB SSD)',
-            'HP Envy 15 (15.6" AMD Ryzen 7 5825U 16GB RAM 512GB SSD)', 'Dell Inspiron 16 Plus Intel i7',
-            'Lenovo Legion X5 Pro', 'ASUS Zephyrus G14 (14" AMD)'
+        const pcDevices = [
+            'Laptop', 'Notebook', 'Ultrabook', '2-in-1 Laptop', 'Gaming Laptop', 'Workstation Laptop'
         ];
 
-
-
-        const jobTitles = [
-            // Finance
-            'Senior Financial Analyst', 'Tax Specialist Level II',
-            'Investment Banking Associate', 'Director of Risk Management', 'VP of Corporate Finance',
-            
-            // Engineering
-            'Software Engineer', 'Senior Backend Developer', 'DevOps Engineer Level III', 'Principal Software Architect',
-            'Data Engineer', 'Senior Full Stack Developer', 'Machine Learning Engineer II', 'Engineering Manager',
-            'Full Stack Developer', 'Front End Developer', 'Back End Developer', 'QA Engineer', 'Test Automation Engineer',
-            
-            // Design
-            'Senior Product Designer', 'Creative Director', 'UI/UX Designer Level II',
-            'Brand Designer', 'Senior Visual Designer', 'Design System Lead',
-            
-            // Marketing
-            'Marketing Coordinator', 'Senior Digital Marketing Manager', 'Content Marketing Specialist II',
-            'Brand Marketing Director', 'Senior Growth Marketing Manager', 'Performance Marketing Lead', 'VP of Marketing',
-            
-            // Sales
-            'Sales Representative', 'Senior Account Executive', 'Sales Director', 'Business Development Manager II',
-            'Enterprise Sales Manager', 'Senior Customer Success Manager', 'Regional Sales Director',
-            
-            // HR
-            'HR Coordinator', 'Senior People Operations Manager', 'Talent Acquisition Specialist II',
-            'Employee Relations Manager', 'Senior Analyst', 'Organizational Development Director', 'VP of People & Culture',
-            
-            // IT
-            'IT Specialist', 'Senior Systems Administrator', 'Network Engineer Level III',
-            'Cybersecurity Manager', 'Senior Cloud Architect', 'IT Operations Director', 'Chief Information Security Officer',
-            'Site Reliability Engineer',
-            
-            // Product
-            'Product Manager', 'Senior Product Manager', 'Associate Product Manager II',
-            'Technical Product Manager', 'Senior Product Marketing Manager', 'Director of Product Strategy', 'VP of Product',
-            
-            // Operations
-            'Operations Coordinator', 'Senior Operations Manager', 'Supply Chain Analyst',
-            'Process Improvement Manager', 'Senior Project Manager', 'Operations Excellence Director', 'VP of Operations',
-            
-            // Data & Analytics
-            'Data Analyst', 'Senior Data Scientist', 'Business Intelligence Analyst',
-            'Analytics Manager', 'Director of Data Engineering', 'VP of Data & Analytics',
-            
-            // Customer Success
-            'Customer Success Representative', 'Senior Customer Success Manager', 'Customer Success Specialist II',
-            'Customer Experience Manager', 'Senior Account Manager', 'Director of Customer Success',
-            
-            // Legal & Compliance
-            'Legal Assistant', 'Senior Corporate Counsel', 'General Counsel', 'Compliance Officer Level II',
-            'Senior Legal Operations Manager', 'Chief Compliance Officer',
-
-            //Other Job Titles
-            'Artist', 'Event Coordinator', 'Copywriter', 'Executive Assistant', 'Food Taster',
-            
-            // Silly Job Titles
-            'Chief Happiness Officer', 'Senior Meme Analyst', 'Director of Cat Herding', 'Nap Coordinator', 'VP of Snacks', 'VP of Naps',
-            'VP of Snack Operations', 'Coffee Quality Assurance Manager', 'Senior Emoji Specialist', 'Chief Procrastination Officer',
-            'Lead Rubber Duck Debugger', 'Director of Office Plants', 'Senior Overthinking Consultant', 'Principal Chaos Engineer',
-            'VP of Meeting About Meetings', 'Chief Fun Police', 'Director of Existential Crisis Management',
-            'Chief Wizard', 'Senior Deadline Whisperer', 'Sock Puppet Strategist', 'Top Hat Magician',
-            'VP of Overthinking', 'Lead Conspiracy Theory Debunker', 'Professional Meeting Attender', 'Fashion Police Officer',
-            'Pro Wrestler', 'Chief Nap Advisor', 'Puppy Concierge', 'Senior Pen Cap Chewer', 
-            'Director of Explaining Things Twice', 'Principal Cat Video Quality Controller', 'VP of Making Things Look Busy', 'Senior Parking Spot Negotiator',
-            'Chief Microwave Timer Expert','VP of Untangling Headphones', 'Senior YOLO Operative',
-            'Professional Sock Sorter', 'Sandwich Whisperer', 'Unicorn Rider', 'Narwhal Detective'
+        const pcSizes = [
+            '13-inch', '14-inch', '15-inch', '15.6-inch', '16-inch', '17-inch'
         ];
+
+        const pcCPUs = [
+            'Intel i5', 'Intel i7', 'Intel i9', 'AMD Ryzen 5', 'AMD Ryzen 7', 'AMD Ryzen 9'
+        ];
+
+        const pcRAMs = [
+            '8GB', '16GB', '32GB', '64GB', '128GB', '256GB'
+        ];
+
+        const pcSSDs = [
+            '512GB SSD', '1TB SSD', '2TB SSD', '4TB SSD', '8TB SSD'
+        ];
+
+        const pcSuffixes = [
+            '11th Gen', '12th Gen', '13th Gen', '14th Gen', '15th Gen', 'X1', 'Pro', 'Plus', 'Ultra', 'Studio', 'Extreme'
+        ];
+
+        const macOSVersions = [
+            'macOS Sonoma', 'macOS Ventura', 'macOS Monterey', 'macOS Big Sur', 'macOS Catalina', 'MacOS Sequoia'
+        ];
+
+        const windowsVersions = [
+            'Windows 10 Pro', 'Windows 10 Home', 'Windows 11 Pro', 'Windows 11 Home', 'Windows 11 Enterprise'
+        ];
+
 
         const personalEmailDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'icloud.com', 'aol.com'];
         
         const workEmailDomains = ['abccompany.com', 'techcorp.net', 'innovate.io', 'globaldynamics.biz', 'nexus.co', 'brightideas.tech',
               'catalyst.org', 'northstar.io', 'bluesky.labs', 'acme.corp', 'rocketship.io', 'unicornstartup.co', 'meridiangroup.com', 'vortexsolutions.tech',
-              'amplify.tech'
+              'amplify.tech', 'unicornventures.io', 'synergygroup.biz', 'quantuminnovations.co', 'nextgen.solutions', 'futuristiclabs.com'
         ];
 
         const organizationNames = [
@@ -718,6 +739,25 @@
             'Labs', 'Global', 'Services', 'Consulting', 'Tech', 'AI/ML', 'ML/AI', 'Innovations', 'Productions'
         ];
 
+        const assetBrands = [
+            'Dell', 'Apple', 'HP', 'Lenovo', 'Asus', 'Acer', 'Microsoft', 'Razer', 'Samsung', 'LG', 
+            'Bose', 'Sony', 'JBL', 'Logitech', 'Anker', 'Netgear', 'Cisco', 'Seagate', 'Western Digital',
+            'CalDigit', 'Lunar Artefacts', 'SteelSeries'
+        ];
+
+        const assetTypes = [
+            'Monitor', '4K Monitor', 'OLED Monitor','Keyboard', 'Mouse', 'Docking Station', 'Router', 'Wireless Router', 'Headphones',
+            'Speaker', 'Noise-Cancelling Headphones', 'Gaming Headset', 'External SSD',
+            'External Hard Drive', 'SSD', 'USB Hub', 'Webcam', 'Microphone', 'Printer', 'Scanner',
+            'Graphics Tablet', 'VR Headset', 'Projector', 'Thunderbolt Dock'
+        ];
+
+        const assetModels = [
+            'Pro', 'Plus', 'Max', 'Studio', 'Extreme', 'Gaming', 
+            'Wireless', 'Mechanical', 'Bluetooth', 'USB-C', 'Thunderbolt', 'AI-Powered',
+            'Portable', 'Compact', 'X1', 'Elite', 'Ultra', 'Advanced', 'Next-Gen'
+        ];
+
         const appPrefixes = [
             'Quick', 'Smart', 'Fast', 'Super', 'Ultra', 'Mega', 'Pro', 'Max', 'Plus', 'Go', 'My', 'The', 
             'Omni', 'Aero', 'Eclectic', 'Nano', 'Magna', 'Adaptive', 'Subatomic',
@@ -728,14 +768,15 @@
             'Cipher', 'Vector', 'Helix', 'Dimension', 'Parallax', 'Kinetic', 'Axiom', 'Vortex', 'Axon',
             'Paradigm', 'Proton', 'Phantom', 'Isotope', 'Sonic', 'Neon', 'Neutron', 'Portal', 'Molecule', 'Atom',
             'Graphite', 'Charge', 'Carbon', 'Holographic', 'Synapse', 'Cortex', 'Comet', 'Radioactive', 'Interstellar',
-            'Prototype', 'Blockchain', 'Polygon', 'Recursive', 'PyTorch', 'Keros', 'Boolean',
+            'Prototype', 'Blockchain', 'Polygon', 'Recursive', 'PyTorch', 'Keros', 'Boolean', 'Nimbus', 'Quantum',
+            'Tesseract', 'Singularity', 'Continuum', 'Echelon', 'Spectrum', 'Catalyst', 'Momentum', 'Nucleus', 'Stratus'
         ];
 
         const appSuffixes = [
             'Hub', 'Zone', 'Pro', 'Max', 'Plus', 'Go', 'Now', 'Express', 'Lite', 'Premium', 'Studio', 'Lab',
             'Craft', 'Sphere', 'Stack', 'Core', 'Path', 'Vault', 'Encoder', 'Decoder', 'Compiler', 'Engine', 'Builder',
             'Module', 'AI', 'ML', 'AI/ML', 'ML/AI', 'Converter', 'Parser', 'Synthesizer', 'Detector',
-            'Proxy', 'Theory', 'Optimizer', 'One', 
+            'Proxy', 'Theory', 'Optimizer', 'One', 'Extreme', 'Edge', 'Vision', 'Insight', 'Pulse', 'Wave', 'Stream',
             'Works', 'Tools', 'Suite', 'Box', 'Kit', 'Desk', 'Space', 'Cloud', 'Link', 'Connect', 'Sync', 'Flow'
         ];
 
@@ -798,7 +839,34 @@
 
         function generateAsset() {
             const asset = randomChoice(assets);
-            const result = `${asset}`;
+            const brand = randomChoice(assetBrands);
+            const type = randomChoice(assetTypes);
+            const model = randomChoice(assetModels);
+            const formatChoice = Math.floor(Math.random() * 5);
+            let result = '';
+            switch (formatChoice) {
+                case 0:
+                    // brand type
+                    result = `${brand} ${type}`;
+                    break;
+                case 1:
+                    // brand type model
+                    result = `${brand} ${type} ${model}`;
+                    break;
+                case 2:
+                    // brand model type
+                    result = `${brand} ${model} ${type}`;
+                    break;
+                case 3:
+                    // model brand type
+                    result = `${model} ${brand} ${type}`;
+                    break;
+                case 4:
+                    result = `${asset}`;
+                    break;
+                default:
+                    result = `${brand} ${type}`;
+            }
             updateOutput('asset-output', result);
         }
 
@@ -812,7 +880,6 @@
             const ram = randomChoice(['8GB', '16GB', '24GB', '32GB', '64GB', '128GB']);
             const color = randomChoice(['Space Gray', 'Silver', 'Gold', 'Space Black', 'Midnight', 'Starlight']);
             
-            // Randomly choose one of the 6 formats (fixed the random range)
             const formatChoice = Math.floor(Math.random() * 6);
             let result = '';
             
@@ -849,8 +916,42 @@
         }
 
         function generateWindowsDevice() {
-            const device = randomChoice(windowsDevices);
-            const result = `${device}`;
+            const brand = randomChoice(pcBrands);
+            const device = randomChoice(pcDevices);
+            const size = randomChoice(pcSizes);
+            const cpu = randomChoice(pcCPUs);
+            const ram = randomChoice(pcRAMs);
+            const ssd = randomChoice(pcSSDs);
+            const suffix = randomChoice(pcSuffixes);
+            
+            const formatChoice = Math.floor(Math.random() * 7);
+            let result = '';
+            
+            switch (formatChoice) {
+                case 0:
+                    result = `${brand} ${device} ${size}`;
+                    break;
+                case 1:
+                    result = `${brand} ${device} ${size} - ${cpu}`;
+                    break;
+                case 2:
+                    result = `${brand} ${device} ${size} - ${cpu} - (${ram})`;
+                    break;
+                case 3:
+                    result = `${brand} ${device} ${size} ${cpu} (${ram} RAM - ${ssd})`;
+                    break;
+                case 4:
+                    result = `${brand} ${device} ${size} - ${cpu} - ${ram} RAM - ${ssd}`;
+                    break;
+                case 5:
+                    result = `${brand} ${device} ${size} - ${cpu} - ${ram} RAM - ${ssd} ${suffix}`;
+                    break;
+                case 6:
+                    result = `${brand} ${device} - ${cpu} - ${ram} RAM - ${ssd} ${suffix}`;
+                    break;
+                default:
+                    result = `${brand} ${device} ${size}`;
+            }
             updateOutput('windows-output', result);
         }
 
@@ -981,7 +1082,7 @@
                     return randomChoice(patterns)();
                 },
                 mac: () => {
-                    const device = randomChoice(macDevices);
+                    const device = randomChoice(['MacBook', 'Apple MB', 'Apple Macbook']);
                     const model = randomChoice(['Air', 'Pro']);
                     const size = randomChoice(['13"', '14"', '15"', '16"', '13-inch', '14-inch', '15-inch', '16-inch']);
                     const cpu = randomChoice(['M3', 'M4', 'M4 Pro', 'M4 Max', 'M3 Ultra', 'M4 Ultra']);
@@ -1024,8 +1125,59 @@
                     }
                     return result;
                 },
-                windows: () => randomChoice(windowsDevices),
-                assets: () => randomChoice(assets),
+                windows: () => {
+                    const brand = randomChoice(pcBrands);
+                    const device = randomChoice(pcDevices);
+                    const size = randomChoice(pcSizes);
+                    const cpu = randomChoice(pcCPUs);
+                    const ram = randomChoice(pcRAMs);
+                    const ssd = randomChoice(['512GB SSD', '1TB SSD', '2TB SSD', '4TB SSD']);
+                    const suffix = randomChoice(pcSuffixes);
+                    
+                    const formatChoice = Math.floor(Math.random() * 6);
+                    let result = '';
+                    
+                    switch (formatChoice) {
+                        case 0:
+                            result = `${brand} ${device} ${size}`;
+                            break;
+                        case 1:
+                            result = `${brand} ${device} ${size} - ${cpu}`;
+                            break;
+                        case 2:
+                            result = `${brand} ${device} ${size} - ${cpu} - (${ram})`;
+                            break;
+                        case 3:
+                            result = `${brand} ${device} ${size} ${cpu} (${ram} RAM - ${ssd})`;
+                            break;
+                        case 4:
+                            result = `${brand} ${device} ${size} - ${cpu} - ${ram} RAM - ${ssd}`;
+                            break;
+                        case 5:
+                            result = `${brand} ${device} ${size} - ${cpu} - ${ram} RAM - ${ssd} ${suffix}`;
+                            break;
+                        case 6:
+                            result = `${brand} ${device} - ${cpu} - ${ram} RAM - ${ssd} ${suffix}`;
+                            break;
+                        default:
+                            result = `${brand} ${device} ${size}`;
+                    }
+                    return result;
+                },
+                assets: () => {
+                    const asset = randomChoice(assets);
+                    const brand = randomChoice(assetBrands);
+                    const type = randomChoice(assetTypes);
+                    const model = randomChoice(assetModels);
+                    const formats = [
+                        `${brand} ${type}`,
+                        `${brand} ${type} ${model}`,
+                        `${brand} ${model} ${type}`,
+                        `${model} ${brand} ${type}`,
+                        `${asset}`
+                        ];
+                    return randomChoice(formats);
+                },                    
                 organizations: () => {
                     const name = randomChoice(organizationNames);
                     const type = randomChoice(organizationTypes);
